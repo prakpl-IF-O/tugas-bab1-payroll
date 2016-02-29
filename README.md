@@ -33,12 +33,14 @@ Proses bisnis dari program ini
 
 * Hari Sabtu dan Minggu adalah hari libur, maka akan mendapatkan bonus sesuai berapa jam ia kerja di hari tersebut.
 
+* Penghitungan total gaji, `totalGaji = (gaji + tunjangan + bonus) - denda`. `tunjangan` dan `gaji` hanya dijumlahkan sekali.
+
 Contoh data hasil pengolahan total gaji
 
 ```
 nik,nama,gaji,tunjangan,bonus,denda,total_gaji
-101,paijo,900,200,150,75,1100
-102,lulu,875,200,100,100,1875
+101,paijo,900,200,150,75,2600
+102,lulu,875,200,100,100,875
 103,lala,1000,350,200,125,1350
 ```
 
