@@ -20,12 +20,13 @@ public class Karyawan {
         keuangan = new double[a][4];
     }
 
-    public void setNama(String nama) {
-        data[a][0] = nama;
+    public void setNama(String nama, int x) {
+        
+        data[x][0] = nama;
     }
 
-    public void setNIK(String nik) {
-        data[a][1] = nik;
+    public void setNIK(String nik, int x) {
+        data[x][1] = nik;
     }
 
     public void setGaji(double gaji) {
@@ -45,8 +46,8 @@ public class Karyawan {
     }
     
     public void displayMenu(){
-        System.out.println("1. Tentukan jumlah Karyawan");
-        System.out.println("2. Masukkan");
+        System.out.println("1. Tentukan jumlah Karyawan: ");
+        System.out.println("2. Masukkan nama : ");
     }
     
 }
