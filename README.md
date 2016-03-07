@@ -9,10 +9,10 @@ Aplikasi bersifat batch sehingga tidak diperlukan interverensi dari user.
 Contoh data karyawan (comma separated values)
 
 ```
-nik,nama,gaji,tunjangan,bonus,denda // column header, tidak disimpan
-101,paijo,900,200,150,75
-102,lulu,875,200,100,100
-103,lala,1000,350,200,125
+nik,	nama,	gaji,	tunjangan,	bonus,		denda // column header, tidak disimpan
+101,	paijo,	900,	200,		150,		75
+102,	lulu,	875,	200,		100,		100
+103,	lala,	1000,	350,		200,		125
 ```
 
 Contoh data absensi

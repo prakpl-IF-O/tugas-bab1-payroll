@@ -12,7 +12,15 @@ public class data_karyawan {
 
     private int nik, gaji, tunjangan, bonus, denda, total_gaji;
     private String nama;
-
+    
+    public data_karyawan(int _nik,String _nama, int _gaji, int _tunjangan, int _bonus, int _denda){
+        nama = _nama;
+        nik = _nik;
+        gaji = _gaji;
+        tunjangan = _tunjangan;
+        bonus = _bonus;
+        denda = _denda;
+    }
     public void isi_nama(String _nama) {
         nama = _nama;
     }
@@ -37,7 +45,5 @@ public class data_karyawan {
         denda = _denda;
     }
 
-    public int hitung_gaji() {
-        return ((gaji + tunjangan + bonus) - denda);
-    }
+
 }
