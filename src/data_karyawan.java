@@ -10,10 +10,13 @@
  */
 public class data_karyawan {
 
-    private int nik, gaji, tunjangan, bonus, denda, total_gaji;
+    private int nik, gaji, tunjangan, bonus, denda, total_gaji, tahun, bulan, tanggal, jam_masuk, jam_pulang;
     private String nama;
-    
-    public data_karyawan(int _nik,String _nama, int _gaji, int _tunjangan, int _bonus, int _denda){
+    private boolean hari_libur;
+    int total_bonus = 0;
+    int total_denda = 0;
+
+    public data_karyawan(int _nik, String _nama, int _gaji, int _tunjangan, int _bonus, int _denda) {
         nama = _nama;
         nik = _nik;
         gaji = _gaji;
@@ -21,29 +24,59 @@ public class data_karyawan {
         bonus = _bonus;
         denda = _denda;
     }
-    public void isi_nama(String _nama) {
-        nama = _nama;
+
+    public void Absensi(int _tahun, int _bulan, int _tanggal, int _jam_masuk, int _menit_masuk, int _jam_pulang, int _menit_pulang, boolean _hari_libur) {
+        tahun = _tahun;
+        bulan = _bulan;
+        tanggal = _tanggal;
+        jam_masuk = _jam_masuk;
+        jam_pulang = _jam_pulang;
+        hari_libur = _hari_libur;
     }
 
-    public void isi_nik(int _nik) {
-        nik = _nik;
+    public int hitung_bonus() {
+
+        if (hari_libur == false) {
+            total_bonus += bonus_lembur();
+            return total_bonus;
+        } else {
+            return ((jam_pulang - jam_masuk) * bonus);
+        }
     }
 
-    public void isi_gaji(int _gaji) {
-        gaji = _gaji;
+    private int bonus_lembur() {
+        if (jam_pulang > 17) {
+            return ((jam_pulang - 17) * bonus);
+        } else {
+            return 0;
+        }
     }
 
-    public void isi_tunjangan(int _tunjangan) {
-        tunjangan = _tunjangan;
+    public int hitung_denda() {
+
+        if (hari_libur == false) {
+            total_denda = denda_pulang();
+            total_denda += denda_masuk();
+            return total_denda;
+        } else {
+            return 0;
+        }
     }
 
-    public void isi_bonus(int _bonus) {
-        bonus = _bonus;
+    private int denda_pulang() {
+        if (jam_pulang >= 17) {
+            return 0;
+        } else {
+            return (17 - jam_pulang) * denda;
+        }
     }
 
-    public void isi_denda(int _denda) {
-        denda = _denda;
+    private int denda_masuk() {
+        if (jam_masuk <= 8) {
+            return 0;
+        } else {
+            return (jam_masuk - 8) * denda;
+        }
     }
-
 
 }
