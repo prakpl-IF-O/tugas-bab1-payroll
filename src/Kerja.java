@@ -17,6 +17,9 @@ public class Kerja {
     private double tunjangan;
     private double bonus;
     private double denda;
+    private double denda1;
+    private double denda2;
+    private double denda3;
     private String tanggal;
     private double jammsk;
     private double jamplg;
@@ -24,49 +27,65 @@ public class Kerja {
     
     public void setKaryawan (){
         Scanner in = new Scanner (System.in);
-        System.out.println("masukan nama    :");
+        System.out.print("Masukan Nama    :");
         Nama = in.nextLine();
-        System.out.println("masukan nik");
+        System.out.print("Masukan NIK     :");
         nik=in.nextLine();
-        System.out.println("gaji");
+        System.out.print("Gaji            :");
         gaji=in.nextDouble();
-        System.out.println("tunjangan");
+        System.out.print("Tunjangan       :");
         tunjangan=in.nextDouble();
     }
     public void setAbsensi(){
         Scanner in= new Scanner (System.in);
-        System.out.println("masukan tanggal");
+        System.out.print("Masukan Tanggal :");
         tanggal=in.nextLine();
-        System.out.println("jam masuk");
+        System.out.print("Jam Masuk       :");
         jammsk=in.nextDouble();
-        System.out.println("jam plg");
+        System.out.print("Jam Pulang      :");
         jamplg=in.nextDouble();
         
-    }
-    public void rubah (){
-        jamplg=jamplg*60;
     } 
     public void getBonus(){
-        bonus=(jamplg-17) * 100;   
+        if ( jamplg > 17){
+        bonus=(jamplg-17) * 50;   
+    } else {
+            bonus=0;
+        }
     }
     public void getDenda (){
-        denda=(jammsk-8)*50;
-        if (jamplg < 17){
-            denda=((jammsk - 8)+(17-jamplg)) * 50;
+        denda1= jammsk-8;
+        denda2= 17 - jamplg;
+        if (jamplg < 17 && jammsk > 8){
+            denda=(denda1+denda2) * 50;
         } 
+        else if ( jammsk<8&&jamplg < 17) {
+          denda=denda2*50;  
+        } 
+        else if ( jammsk > 8 && jamplg > 17){
+            denda=denda1*50 ;
+        } 
+        else if (jammsk==8&&jamplg<17){
+            denda=denda2*50;
+        }
+        else if ( jammsk>8&&jamplg==17){
+            denda=denda1*50;
+        } else {
+            denda=0;
+        }
     }
     public void getTotal(){
         total=( gaji+tunjangan+bonus)-denda;
         
     }
     public void display (){
-        System.out.println("Nama"+ Nama);
-        System.out.println("Nik"+ nik);
-        System.out.println("Gaaji"+ gaji);
-        System.out.println("tunjangan"+tunjangan);
-        System.out.println("bonus"+bonus);
-        System.out.println("denda"+denda);
-        System.out.println("total"+total);
+        System.out.println("Nama Karyawan   :"+ Nama);
+        System.out.println("Nik Karyawan    :"+ nik);
+        System.out.println("Gaji Karyawan   :"+ gaji);
+        System.out.println("Tunjangan       :"+tunjangan);
+        System.out.println("Bonus           :"+bonus);
+        System.out.println("Denda           :"+denda);
+        System.out.println("Total Gaji      :"+total);
     }
     
 }
