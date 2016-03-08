@@ -28,6 +28,14 @@ public class MAIN {
                 k1.bonusdenda(k1.bon1, k1.den1);
                 k1.gaji(k1.gaji1, k1.bonus, k1.tun1, k1.denda); break;
                 
+            case 102:
+                System.out.println("Nama Karyawan : "+k2.nam2);
+                k2.harikerja();
+                System.out.println("");
+                k2.harilibur();
+                k2.bonusdenda(k2.bon2, k2.den2);
+                k2.gaji(k2.gaji2, k2.bonus, k2.tun2, k2.denda); break;
+                
         }
         }while(menu!=0);
     }
