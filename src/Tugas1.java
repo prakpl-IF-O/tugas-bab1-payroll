@@ -6,11 +6,13 @@ public class Tugas1 {
     public double gaji,tunjangan,bonus,denda,jumdenda,jumlah;
     public int Omasuk = 8;
     public int Okeluar = 17;
+    double [] bon = new double [2];
     public String [] tanggal = new String[2];
     double []masukjam = new double [2];
     double []bolosjam = new double [2];
     double []keluarjam = new double [2];
     double []telatjam = new double [2];
+    double []jum = new double [2];
     
  
     public static void main(String[]args) {
@@ -23,14 +25,16 @@ public class Tugas1 {
         Ka.setBonus(150);
         Ka.setDenda(75);
         Ka.tanggal[0]= "2016-01-15";
-        Ka.masukjam[0]= 8.5;
+        Ka.masukjam[0]= 8;
         Ka.keluarjam[0]= 17;
-        Ka.ketentuanJam(Ka.masukjam[0],Ka.keluarjam[0]);
+        Ka.ketentuanJam1(Ka.masukjam[0],Ka.keluarjam[0],Ka.bonus);
         Ka.tanggal[1]= "2016-01-16";
         Ka.masukjam[1]= 8;
-        Ka.keluarjam[1]= 18;
-        Ka.ketentuanJam(Ka.masukjam[1],Ka.keluarjam[1]);
-        Ka.jumDenda(Ka.getDenda());
+        Ka.keluarjam[1]= 18.5;
+        Ka.ketentuanJam2(Ka.masukjam[1],Ka.keluarjam[1],Ka.bonus);
+        Ka.jumDenda1(Ka.getDenda());
+        Ka.jumDenda2(Ka.getDenda());
+        Ka.jumlahdenda();
         Ka.jumlah();
         Ka.InformasiKaryawan();
                 
@@ -73,26 +77,49 @@ public class Tugas1 {
     public double getDenda(){
         return denda;
     }
-    public void ketentuanJam (double s,double x) {
-      for (int i=0; i<telatjam.length; i++){
+    public void ketentuanJam1 (double s,double x,double z) {
         if (s>8){
-            telatjam[i] = (double) (s-8);
+            telatjam[0] = (double) (s-8);
         }
         if (x<17){
-            bolosjam[i] =(double) (17-x);
+            bolosjam[0] =(double) (17-x);
+      } else {
+            bon [0]= (x-17)*z;
         }
-      }
     }
-    public void jumDenda(double z){
-    jumdenda = telatjam[0]+bolosjam[0]+telatjam[1]+bolosjam[1]*z;  
+    public void ketentuanJam2 (double s,double x,double z) {
+     
+        if (s>8){
+            telatjam[1] = (double) (s-8);
+        }
+        if (x<17){
+            bolosjam[1] =(double) (17-x);
+      } else {
+            bon [1] = (x-17)*z;
+        }
+    }
+    
+    public void jumDenda1(double z){
+    jum[0] = (telatjam[0]+bolosjam[0])*z;  
+    }
+    public void jumDenda2(double z){
+    jum[1] = (telatjam[0]+bolosjam[0])*z;  
+    }
+    public void jumlahdenda(){
+        jumdenda = jum[0]+jum[1];
     }
     public void jumlah (){
-        jumlah = (gaji + tunjangan+ bonus) - jumdenda;
-    }
+        if (tanggal[1]==null) {
+        jumlah = (gaji + tunjangan)+ bon[0] + bon[1] - jumdenda;
+        }else{
+         jumlah = (gaji+tunjangan)*2+ bon[0] + bon[1] - jumdenda;   
+        }  
+    } 
           
     public void InformasiKaryawan(){
         System.out.printf("%-10s : %d\n","NIK",nik);
         System.out.printf("%-10s : %s\n","Nama",nama);
+        System.out.printf("%-10s : %s \n","Tanggal",tanggal[0]);
         System.out.printf("%-10s : Rp. %f\n","Gaji",gaji);
         System.out.printf("%-10s : Rp. %s\n","Tunjangan",tunjangan);
         System.out.printf("%-10s : Rp. %s\n","Bonus",bonus);
