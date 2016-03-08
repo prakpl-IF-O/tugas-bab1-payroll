@@ -61,25 +61,28 @@ public class data_karyawan {
     
     private void tampilkan_rekap (){
         System.out.println("Rekapitulasi Absen  ");
-        System.out.println("  Nama               : " + nama);
-        System.out.println("  Absen sebanyak     : " + jumlah_absen + " kali");
-        System.out.println("  Pada tanggal       : ");
+        System.out.println("  Nama           : " + nama);
+        System.out.println("  Absen sebanyak : " + jumlah_absen + " kali");
+        System.out.println("  Pada tanggal   : ");
 
         for (int y = 0; y < jumlah_absen; y++) {
             System.out.println("     " + (y+1) + ". " + tanggal[y] + "-" + bulan[y] + "-" + tahun[y]);
             System.out.println("        " + jam_masuk[y] + ":" + menit_masuk[y] + " sampai " + jam_pulang[y] + ":" + menit_pulang[y]);
         }
         
-        System.out.println("  Gaji       : "+ gaji);
-        System.out.println("  Tunjangan  : "+ tunjangan);
-        System.out.println("  Bonus      : "+ hitung_bonus());
-        System.out.println("  Denda      : "+ hitung_denda());
-        System.out.println("  Total Gaji : "+ hitung_total_gaji());
+        System.out.println("  Gaji           : "+ gaji);
+        System.out.println("  Tunjangan      : "+ tunjangan);
+        System.out.println("  Bonus          : "+ hitung_bonus());
+        System.out.println("  Denda          : "+ hitung_denda());
+        System.out.println("  Total Gaji     : "+ hitung_total_gaji());
         System.out.println("");
     }
-    
-    public int hitung_total_gaji (){
-        return ((gaji + tunjangan + hitung_bonus()) - hitung_denda());
+    public void tampilkan_tabel() {
+        System.out.println(nik + "\t" + nama + "\t" + gaji + "\t" + tunjangan + "\t\t" + bonus + "\t" + denda + "\t" + total_gaji);
+    }
+    public int hitung_total_gaji() {
+        total_gaji = ((gaji + tunjangan + hitung_bonus()) - hitung_denda());
+        return total_gaji;
     }
     
     public int hitung_bonus() {
