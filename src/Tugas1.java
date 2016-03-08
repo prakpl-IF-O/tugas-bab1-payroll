@@ -110,8 +110,10 @@ public class Tugas1 {
     }
     public void jumlah (){
         if (tanggal[1]==null) {
+            System.out.println(nama+" Berkerja selama 1 Hari (gaji+tunjangan) ");
         jumlah = (gaji + tunjangan)+ bon[0] + bon[1] - jumdenda;
         }else{
+            System.out.println(nama+" Berkerja selama 2 Hari (gaji+tunjangan*2)");
          jumlah = (gaji+tunjangan)*2+ bon[0] + bon[1] - jumdenda;   
         }  
     } 
@@ -119,12 +121,15 @@ public class Tugas1 {
     public void InformasiKaryawan(){
         System.out.printf("%-10s : %d\n","NIK",nik);
         System.out.printf("%-10s : %s\n","Nama",nama);
-        System.out.printf("%-10s : %s \n","Tanggal",tanggal[0]);
         System.out.printf("%-10s : Rp. %f\n","Gaji",gaji);
         System.out.printf("%-10s : Rp. %s\n","Tunjangan",tunjangan);
-        System.out.printf("%-10s : Rp. %s\n","Bonus",bonus);
-        System.out.printf("%-10s : Rp.-%s\n","Denda",jumdenda);
+        System.out.printf("%-10s : %s \n","Tanggal 1",tanggal[0]);
+        System.out.printf("%-10s : Rp. %s\n","Bonus 1",bon[0]);
+        System.out.printf("%-10s : Rp.-%s\n","Denda 1",jum[0]);
+        System.out.printf("%-10s : %s \n","Tanggal 2",tanggal[1]);
+        System.out.printf("%-10s : Rp. %s\n","Bonus 2",bon[1]);
+        System.out.printf("%-10s : Rp.-%s\n","Denda 2",jum[1]);
         System.out.println("-------------------------- +");
-        System.out.printf("%-10s : Rp. %s","Jumlah",jumlah);    
+        System.out.printf("%-10s : Rp. %s","Jumlah gajih",jumlah);    
 }
 }
