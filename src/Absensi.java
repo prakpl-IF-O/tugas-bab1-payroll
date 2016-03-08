@@ -79,4 +79,10 @@ public class Absensi {
         }
 
     }
+    public double getJamK(){
+    return checkJamK;
+    }
+    public double getJamT(){
+    return checkJamT;
+    }
 }

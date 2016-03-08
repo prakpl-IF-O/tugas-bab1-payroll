@@ -65,4 +65,8 @@ public class DataKaryawan {
         return bonus;
     }
 
+    public int getDenda() {
+        return denda;
+    }
+
 }
