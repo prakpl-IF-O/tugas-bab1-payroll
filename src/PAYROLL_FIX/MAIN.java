@@ -20,7 +20,14 @@ public class MAIN {
         System.out.print("Masukan NIK Pegawai : ");
         menu=masukan.nextInt();
         switch(menu){
-            
+            case 101:
+                System.out.println("Nama Karyawan : "+k1.nam1);
+                k1.harikerja();
+                System.out.println("");
+                k1.harilibur();
+                k1.bonusdenda(k1.bon1, k1.den1);
+                k1.gaji(k1.gaji1, k1.bonus, k1.tun1, k1.denda); break;
+                
         }
         }while(menu!=0);
     }
