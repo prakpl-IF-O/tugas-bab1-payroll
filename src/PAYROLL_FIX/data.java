@@ -34,6 +34,7 @@ public class data {
             lemburlibur+=jam;
         }
     }
+    
     public void harikerja(){
         Scanner masukan=new Scanner(System.in);
         System.out.println("Masukan Jumlah Hari kerja");
@@ -61,4 +62,10 @@ public class data {
             lemburr+=lembur;
         }
     }
+    
+    public void bonusdenda(double bonuss, double dendaa){
+            bonus=(lemburlibur+lemburr)*bonuss;
+            denda=telatt*dendaa;
+        }
+    
 }
