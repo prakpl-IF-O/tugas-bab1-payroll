@@ -49,9 +49,9 @@ public class MAIN {
                 
             default:
                 System.out.println("NIK TIDAK DITEMUKAN"); 
-                
-                
-        }
+ 
+            }
         }while(menu!=0);
+        System.out.println("Anda Keluar dari Aplikasi");
     }
 }
