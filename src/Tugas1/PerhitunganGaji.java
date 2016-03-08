@@ -32,5 +32,9 @@ package Tugas1;
     public int getTotal() {
         return totalGaji;
     }
-    
+    public void TambahanGaji(Absen abs, DataPegawai p) throws ParseException {
+        abs.checkLibur();
+        abs.checkJam();
+        gajiTambah = (p.getBonus() * abs.getJamTambahan()) + (p.getDenda() * abs.getJamKaryawan());
+    }
 }
