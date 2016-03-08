@@ -12,7 +12,13 @@ public class MAIN {
         d.data();
         int menu=0;
         do{
-            
+        System.out.println("Pilih Karyawan ");
+        System.out.println("101. Paijo");
+        System.out.println("102. Lulu");
+        System.out.println("103. Lala");
+        System.out.println("0. KELUAR");
+        System.out.print("Masukan NIK Pegawai : ");
+        menu=masukan.nextInt();
         }while(menu!=0);
     }
 }
