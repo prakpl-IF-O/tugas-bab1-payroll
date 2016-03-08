@@ -19,6 +19,9 @@ public class MAIN {
         System.out.println("0. KELUAR");
         System.out.print("Masukan NIK Pegawai : ");
         menu=masukan.nextInt();
+        switch(menu){
+            
+        }
         }while(menu!=0);
     }
 }
