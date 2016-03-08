@@ -24,6 +24,13 @@ public class Absensi {
         jp = ((c >= 0 && c < 24) ? c : 0);
         mp = ((d >= 0 && d < 60) ? d : 0);
     }
+    public void absen(String t, int a, int b, int c, int d) {
+        tgl = t;
+        jm = ((a >= 0 && a < 24) ? a : 0);
+        mm = ((b >= 0 && b < 60) ? b : 0);
+        jp = ((c >= 0 && c < 24) ? c : 0);
+        mp = ((d >= 0 && d < 60) ? d : 0);
+    }
 
     public void checkLibur() throws ParseException {
         Calendar c = Calendar.getInstance();
@@ -34,13 +41,15 @@ public class Absensi {
         } else {
             isLibur = false;
         }
+        System.out.println("Libur ? "+isLibur);
 
     }
 
     public void checkJam() {
         int j = 0;
         double m = 0;
-        if (isLibur = true) {
+        if (isLibur == true) {
+            System.out.println("Masuk Cabang True");
             m = mp - mm;
             if (m < 0) {
                 m = 60 + m;
@@ -48,6 +57,7 @@ public class Absensi {
             }
             checkJamT = j + (jp - jm);
         } else {
+            System.out.println("Masuk Cabang False");
             if (jm >= 8) {
                 j = 8 - jm;
                 m = mm / -60.0;
@@ -77,6 +87,9 @@ public class Absensi {
             }
 
         }
+        System.out.println(jm+" "+mm+" "+" "+jp+" "+mp);
+        System.out.println("Denda "+checkJamK);
+        System.out.println("Bonus "+checkJamT);
 
     }
     public double getJamK(){
