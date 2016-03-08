@@ -68,4 +68,9 @@ public class data {
             denda=telatt*dendaa;
         }
     
+    public void gaji(double gaji,double bonus,double tunjangan, double denda){
+            double g=gaji+bonus+tunjangan-denda;
+            System.out.printf("Gaji yang didapat = Rp %.0f.000 ,-",g);
+        }
+    
 }
