@@ -10,4 +10,16 @@ public class data {
     double bonus, denda;
     int hk, lemburlibur;
     double telat, telatt=0, lembur, lemburr=0;
+    
+    
+    public void data(){
+        System.out.println("======================================================");
+        System.out.println("nik     nama      gaji     tunjangan    bonus    denda");
+        System.out.println("------------------------------------------------------");
+        System.out.println("101     paijo     900        200        150       75");
+        System.out.println("102     lulu      875        200        100       100");
+        System.out.println("103     lala      1000       350        200       125");
+        System.out.println("======================================================");
+        System.out.println("MASUK = 08.00 || PULANG = 17.00");
+    }
 }
