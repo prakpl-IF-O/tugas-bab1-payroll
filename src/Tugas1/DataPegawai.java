@@ -10,12 +10,12 @@ package Tugas1;
  * @author Aditya
  */
 public class DataPegawai {
-    public String nama;
-    public int nik;
-    int gaji;
-    int bonus;
-    int denda;
-    int tunjangan;
+    private String nama;
+    private int nik;
+    private int gaji;
+    private int bonus;
+    private int denda;
+    private int tunjangan;
     
 
     public DataPegawai (int ni, String na, int ga,int t, int b, int de) {
@@ -70,7 +70,14 @@ public class DataPegawai {
         return tunjangan;
     }
 
-   
-    }    
+    public int getGaji() {
+        return gaji;
+    }
 
+    public int getBonus() {
+        return bonus;
+    }
+
+    
+}   
 
