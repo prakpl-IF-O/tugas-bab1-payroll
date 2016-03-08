@@ -10,44 +10,21 @@ package Github;
  * @author dwiyan
  */
 public class Karyawan {
+private int data[][]= new int[3][4];
 
-    private int a = 0;
-    private String data[][];
-    private double keuangan[][];
-
-    public void setKaryawan(int a) {
-        data = new String[a][2];
-        keuangan = new double[a][4];
+public void dataKaryawan() {
+        data[0][0] = 900;
+        data[0][1] = 200;
+        data[0][2] = 150;
+        data[0][3] = 75;
+        data[1][0] = 875;
+        data[1][1] = 200;
+        data[1][2] = 100;
+        data[1][3] = 100;
+        data[2][0] = 1000;
+        data[2][1] = 300;
+        data[2][2] = 200;
+        data[2][3] = 125;
     }
-
-    public void setNama(String nama, int x) {
-        
-        data[x][0] = nama;
-    }
-
-    public void setNIK(String nik, int x) {
-        data[x][1] = nik;
-    }
-
-    public void setGaji(double gaji) {
-        keuangan[a][0] = gaji;
-    }
-
-    public void setTunjangan(double tunjangan) {
-        keuangan[a][1] = tunjangan;
-    }
-
-    public void setBonus(double bonus) {
-        keuangan[a][2] = bonus;
-    }
-
-    public void setDenda(double denda) {
-        keuangan[a][3] = denda;
-    }
-    
-    public void displayMenu(){
-        System.out.println("1. Tentukan jumlah Karyawan: ");
-        System.out.println("2. Masukkan nama : ");
-    }
-    
+   
 }
