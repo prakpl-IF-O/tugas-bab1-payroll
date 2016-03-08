@@ -5,14 +5,15 @@ import java.text.SimpleDateFormat;
 
 public class Absensi {
 
-    int nik;
-    String tgl;
-    int jm;
-    int mm;
-    int jp;
-    int mp;
-    double checkJam = 0;
-    boolean isLibur;
+    private int nik;
+    private String tgl;
+    private int jm;
+    private int mm;
+    private int jp;
+    private int mp;
+    private double checkJamT = 0;
+    private double checkJamK = 0;
+    private boolean isLibur;
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     public Absensi(int n, String t, int a, int b, int c, int d) {
@@ -45,11 +46,12 @@ public class Absensi {
                 m = 60 + m;
                 j = -1;
             }
-            checkJam = j + (jp - jm);
+            checkJamT = j + (jp - jm);
         } else {
             if (jm >= 8) {
                 j = 8 - jm;
                 m = mm / -60.0;
+                checkJamK = j + m;
             } else {
                 if (mm > 0) {
                     j = 8 - (jm + 1);
@@ -57,12 +59,13 @@ public class Absensi {
                 } else {
                     j = 8 - jm;
                 }
+                checkJamT = j + m;
 
             }
-            checkJam = j + m;
             if (jp >= 17) {
                 j = jp - 17;
                 m = mm / 60.0;
+                checkJamT = j + m;
             } else {
                 if (mm > 0) {
                     j = jp - (17 - 1);
@@ -70,8 +73,9 @@ public class Absensi {
                 } else {
                     j = jp - 17;
                 }
+                checkJamK = j + m;
             }
-            checkJam = checkJam + j + m;
+
         }
 
     }
