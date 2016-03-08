@@ -24,6 +24,14 @@ public class data {
     }
     
     public void harilibur(){
-        
+        Scanner masukan=new Scanner(System.in);
+        System.out.println("Masukan Jumlah Hari libur yang ada pada bulan ini: ");
+        int libur=masukan.nextInt();
+        int jam, total=0, tb;
+        for(int i=1; i<=libur; i++){
+            System.out.print("Jam Kerja pada hari libur ke-"+i+" : ");
+            jam=masukan.nextInt();
+            lemburlibur+=jam;
+        }
     }
 }
