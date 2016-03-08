@@ -14,7 +14,6 @@ public class PerhitunganGaji {
     public void hitungPokok(DataKaryawan k) {
         gajiPokok = k.getGaji() + k.getTunjangan();
         totalGaji = gajiPokok;
-        System.out.println(gajiPokok);
     }
 
     public void hitungTambah(Absensi a, DataKaryawan k) throws ParseException {

@@ -41,15 +41,12 @@ public class Absensi {
         } else {
             isLibur = false;
         }
-        System.out.println("Libur ? "+isLibur);
-
     }
 
     public void checkJam() {
         int j = 0;
         double m = 0;
         if (isLibur == true) {
-            System.out.println("Masuk Cabang True");
             m = mp - mm;
             if (m < 0) {
                 m = 60 + m;
@@ -57,7 +54,6 @@ public class Absensi {
             }
             checkJamT = j + (jp - jm);
         } else {
-            System.out.println("Masuk Cabang False");
             if (jm >= 8) {
                 j = 8 - jm;
                 m = mm / -60.0;
@@ -87,9 +83,6 @@ public class Absensi {
             }
 
         }
-        System.out.println(jm+" "+mm+" "+" "+jp+" "+mp);
-        System.out.println("Denda "+checkJamK);
-        System.out.println("Bonus "+checkJamT);
 
     }
     public double getJamK(){
