@@ -1,22 +1,24 @@
 import java.util.ArrayList;
 import java.util.Date;
 public class Tugas1 {
-    public int [] nik = {101,102,103};
-    public String [] nama = {"Paijo", "Lulu", "Lala"} ;
-    public double [] gaji = {900,875,1000};
-    public double [] tunjangan = {200,200,350};
-    public double [] bonus = {150,100,200};
-    public double [] denda = {75,100,125};
-    public double jumlah;
+    public int nik;
+    public String nama;
+    public double gaji,tunjangan,bonus,denda,jumlah;
+    
     public static void main(String[]args){
         Tugas1 karyawan_1 = new Tugas1();
         Tugas1 karyawan_2 = new Tugas1();
         Tugas1 karyawan_3 = new Tugas1();
         
             }
-    public void setmasukKerja(){
-        
-    } 
+    public void setNik (int s){
+        nik = s;
+    }
+    public void setNama(String s){
+        nama = s;
+    }
+    
+    
             
     public void InformasiKaryawan(){
         System.out.printf("%-10s : %d\n","NIK",nik);
