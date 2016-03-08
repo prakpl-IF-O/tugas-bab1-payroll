@@ -11,5 +11,8 @@ public class MAIN {
         System.out.println("");
         d.data();
         int menu=0;
+        do{
+            
+        }while(menu!=0);
     }
 }
