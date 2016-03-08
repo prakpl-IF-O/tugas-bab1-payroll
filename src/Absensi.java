@@ -24,12 +24,9 @@ public class Absensi {
         jp = ((c >= 0 && c < 24) ? c : 0);
         mp = ((d >= 0 && d < 60) ? d : 0);
     }
-    public void absen(String t, int a, int b, int c, int d) {
-        tgl = t;
-        jm = ((a >= 0 && a < 24) ? a : 0);
-        mm = ((b >= 0 && b < 60) ? b : 0);
-        jp = ((c >= 0 && c < 24) ? c : 0);
-        mp = ((d >= 0 && d < 60) ? d : 0);
+
+    public int getNik() {
+        return nik;
     }
 
     public void checkLibur() throws ParseException {
@@ -85,10 +82,12 @@ public class Absensi {
         }
 
     }
-    public double getJamK(){
-    return checkJamK;
+
+    public double getJamK() {
+        return checkJamK;
     }
-    public double getJamT(){
-    return checkJamT;
+
+    public double getJamT() {
+        return checkJamT;
     }
 }

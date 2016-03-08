@@ -7,12 +7,19 @@ public class PerhitunganGaji {
     int gajiPokok;
     double gajiTambah;
     int totalGaji;
-    public PerhitunganGaji(int n){
-    nik = n;
+
+    public PerhitunganGaji(int n) {
+        nik = n;
+    }
+
+    public int getNik() {
+        return nik;
     }
 
     public void hitungPokok(DataKaryawan k) {
-        gajiPokok = k.getGaji() + k.getTunjangan();
+        if (gajiPokok == 0) {
+            gajiPokok = k.getGaji() + k.getTunjangan();
+        }
         totalGaji = gajiPokok;
     }
 
@@ -24,7 +31,7 @@ public class PerhitunganGaji {
 
     public void hitungTotal() {
         totalGaji = totalGaji + (int) gajiTambah;
-        
+
     }
 
     public int getTotal() {

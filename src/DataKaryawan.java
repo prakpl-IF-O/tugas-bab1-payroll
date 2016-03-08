@@ -21,30 +21,6 @@ public class DataKaryawan {
 
     }
 
-    public void setNik(int n) {
-        nik = n;
-    }
-
-    public void setNama(String n) {
-        nama = n;
-    }
-
-    public void setGaji(int g) {
-        gaji = g;
-    }
-
-    public void setTunjangan(int t) {
-        tunjangan = t;
-    }
-
-    public void setBonus(int b) {
-        bonus = b;
-    }
-
-    public void setDenda(int d) {
-        denda = d;
-    }
-
     public int getNik() {
         return nik;
     }
