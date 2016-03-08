@@ -22,4 +22,8 @@ public class data {
         System.out.println("======================================================");
         System.out.println("MASUK = 08.00 || PULANG = 17.00");
     }
+    
+    public void harilibur(){
+        
+    }
 }
