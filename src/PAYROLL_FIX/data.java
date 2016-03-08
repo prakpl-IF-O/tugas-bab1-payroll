@@ -35,6 +35,30 @@ public class data {
         }
     }
     public void harikerja(){
+        Scanner masukan=new Scanner(System.in);
+        System.out.println("Masukan Jumlah Hari kerja");
+        hk=masukan.nextInt();
         
+        for(int i=1; i<=hk; i++){
+            System.out.println("Hari ke-"+i);
+            System.out.print("Datang jam : ");
+            double datang=masukan.nextDouble();
+            telat=(datang-8);
+                if(telat%1!=0){
+                    int telatint=(int) telat;
+                    double temp=(telat-telatint)/0.6;
+                    telat=telatint+temp;
+                }
+            telatt+=telat;
+            System.out.print("Pulang jam : ");
+            double pulang=masukan.nextDouble();
+            lembur=(pulang-17);
+                if(lembur%1!=0){
+                    int lemburint=(int) lembur;
+                    double temp1=(lembur-lemburint)/0.6;
+                    lembur=lemburint+temp1;
+                }
+            lemburr+=lembur;
+        }
     }
 }
