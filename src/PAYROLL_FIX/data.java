@@ -34,4 +34,7 @@ public class data {
             lemburlibur+=jam;
         }
     }
+    public void harikerja(){
+        
+    }
 }
