@@ -45,6 +45,19 @@ public class Tugas1 {
         Kb.setTunjangan(200);
         Kb.setBonus(100);
         Kb.setDenda(100);
+        Kb.tanggal[0]= "2016-01-15";
+        Kb.masukjam[0]= 8;
+        Kb.keluarjam[0]= 15;
+        Kb.ketentuanJam1(Kb.masukjam[0],Kb.keluarjam[0],Kb.bonus);
+        Kb.tanggal[1]= null;
+        Kb.masukjam[1]= 8;
+        Kb.keluarjam[1]= 17;
+        Kb.ketentuanJam2(Kb.masukjam[1],Kb.keluarjam[1],Kb.bonus);
+        Kb.jumDenda1(Kb.getDenda());
+        Kb.jumDenda2(Kb.getDenda());
+        Kb.jumlahdenda();
+        Kb.jumlah();
+        Kb.InformasiKaryawan();
         
         Tugas1 Kc = new Tugas1();
         Kc.setNik(103);
@@ -103,7 +116,7 @@ public class Tugas1 {
     jum[0] = (telatjam[0]+bolosjam[0])*z;  
     }
     public void jumDenda2(double z){
-    jum[1] = (telatjam[0]+bolosjam[0])*z;  
+    jum[1] = (telatjam[1]+bolosjam[1])*z;  
     }
     public void jumlahdenda(){
         jumdenda = jum[0]+jum[1];
@@ -130,6 +143,6 @@ public class Tugas1 {
         System.out.printf("%-10s : Rp. %s\n","Bonus 2",bon[1]);
         System.out.printf("%-10s : Rp.-%s\n","Denda 2",jum[1]);
         System.out.println("-------------------------- +");
-        System.out.printf("%-10s : Rp. %s","Jumlah gajih",jumlah);    
+        System.out.printf("%-10s : Rp. %s\n\n","Jumlah gajih",jumlah);    
 }
 }
