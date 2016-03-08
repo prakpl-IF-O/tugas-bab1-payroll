@@ -9,20 +9,20 @@ Aplikasi bersifat batch sehingga tidak diperlukan interverensi dari user.
 Contoh data karyawan (comma separated values)
 
 ```
-nik,nama,gaji,tunjangan,bonus,denda // column header, tidak disimpan
-101,paijo,900,200,150,75
-102,lulu,875,200,100,100
-103,lala,1000,350,200,125
+nik,	nama,	gaji,	tunjangan,	bonus,		denda // column header, tidak disimpan
+101,	paijo,	900,	200,		150,		75
+102,	lulu,	875,	200,		100,		100
+103,	lala,	1000,	350,		200,		125
 ```
 
 Contoh data absensi
 
 ```
-nik,tanggal,jam_masuk,jam_pulang // column header, tidak disimpan
-101,2016-01-15,08:00,17:00
-101,2016-01-16,08:00,18:30
-102,2016-01-15,08:00,15:00
-103,2016-01-15,08:00,17:00
+nik,	tanggal,	jam_masuk,	jam_pulang // column header, tidak disimpan
+101,	2016-01-15,	08:00,		17:00
+101,	2016-01-16,	08:00,		18:30-
+102,	2016-01-15,	08:00,		15:00
+103,	2016-01-15,	08:00,		17:00
 ```
 
 Proses bisnis dari program ini
@@ -38,10 +38,10 @@ Proses bisnis dari program ini
 Contoh data hasil pengolahan total gaji
 
 ```
-nik,nama,gaji,tunjangan,bonus,denda,total_gaji
-101,paijo,900,200,150,75,2600
-102,lulu,875,200,100,100,875
-103,lala,1000,350,200,125,1350
+nik,	nama,	gaji,	tunjangan,	bonus,	denda,	total_gaji
+101,	paijo,	900,	200,		150,	75,	2600
+102,	lulu,	875,	200,		100,	100,	875
+103,	lala,	1000,	350,		200,	125,	1350
 ```
 
 ## Prosedur Pengumpulan ##
