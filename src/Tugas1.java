@@ -1,11 +1,16 @@
-import java.util.ArrayList;
 import java.util.Date;
+import java.text.SimpleDateFormat;
 public class Tugas1 {
     public int nik;
     public String nama;
-    public double gaji,tunjangan,bonus,denda,jumlah;
+    public double gaji,tunjangan,bonus,denda,jumdenda,jumlah;
+    public int Omasuk = 8;
+    public int Okeluar = 17;
+    public String jam;
     
-    public static void main(String[]args){
+ 
+    public static void main(String[]args) {
+        
         Tugas1 Ka = new Tugas1();      
         Ka.setNik(101);
         Ka.setNama("Paijo");
@@ -13,6 +18,7 @@ public class Tugas1 {
         Ka.setTunjangan(200);
         Ka.setBonus(150);
         Ka.setDenda(75);
+        
         Tugas1 Kb = new Tugas1();
         Kb.setNik(102);
         Kb.setNama("Lulu");
@@ -20,14 +26,15 @@ public class Tugas1 {
         Kb.setTunjangan(200);
         Kb.setBonus(100);
         Kb.setDenda(100);
+        
         Tugas1 Kc = new Tugas1();
-        Ka.setNik(103);
-        Ka.setNama("Lala");
-        Ka.setGaji(1000);
-        Ka.setTunjangan(350);
-        Ka.setBonus(200);
-        Ka.setDenda(125);
-                
+        Kc.setNik(103);
+        Kc.setNama("Lala");
+        Kc.setGaji(1000);
+        Kc.setTunjangan(350);
+        Kc.setBonus(200);
+        Kc.setDenda(125);
+        
     
     }
     public void setNik (int s){
@@ -48,8 +55,21 @@ public class Tugas1 {
     public void setDenda(double s){
         denda = s;
     }
-    public void Total(double s){
+    public void setTanggal (String s){
+        masuk = s;   
+    }    
+    public void (byte s) {
         
+        
+        
+        
+    }
+   
+    public void jumDenda(int x,double z){
+    jumdenda = x*z;  
+    }
+    public void jumlah (double s){
+        jumlah = (gaji + tunjangan+ bonus) - jumdenda;
     }
     
     
@@ -59,13 +79,10 @@ public class Tugas1 {
         System.out.printf("%-10s : %d\n","NIK",nik);
         System.out.printf("%-10s : %s\n","Nama",nama);
         System.out.printf("%-10s : Rp. %f\n","Gaji",gaji);
-        System.out.printf("%-10s : Rp. %s\n","Nama",tunjangan);
-        System.out.printf("%-10s : Rp. %s\n","Nama",bonus);
-        System.out.printf("%-10s : Rp.-%s\n","Nama",denda);
+        System.out.printf("%-10s : Rp. %s\n","Tunjangan",tunjangan);
+        System.out.printf("%-10s : Rp. %s\n","Bonus",bonus);
+        System.out.printf("%-10s : Rp.-%s\n","Denda",jumdenda);
         System.out.println("-------------------------- +");
-        System.out.printf("%-10s : Rp. %s","Jumlah",jumlah);
-        
-        
-        
+        System.out.printf("%-10s : Rp. %s","Jumlah",jumlah);    
 }
 }
