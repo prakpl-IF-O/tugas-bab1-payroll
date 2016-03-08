@@ -36,6 +36,15 @@ public class MAIN {
                 k2.bonusdenda(k2.bon2, k2.den2);
                 k2.gaji(k2.gaji2, k2.bonus, k2.tun2, k2.denda); break;
                 
+            case 103:
+                System.out.println("Nama Karyawan : "+k3.nam3);
+                k3.harikerja();
+                System.out.println("");
+                k3.harilibur();
+                k3.bonusdenda(k3.bon3, k3.den3);
+                k3.gaji(k3.gaji3, k3.bonus, k3.tun3, k3.denda); break;
+                
+                
         }
         }while(menu!=0);
     }
