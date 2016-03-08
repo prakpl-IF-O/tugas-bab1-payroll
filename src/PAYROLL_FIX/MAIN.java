@@ -44,6 +44,12 @@ public class MAIN {
                 k3.bonusdenda(k3.bon3, k3.den3);
                 k3.gaji(k3.gaji3, k3.bonus, k3.tun3, k3.denda); break;
                 
+            case 0:
+                break;
+                
+            default:
+                System.out.println("NIK TIDAK DITEMUKAN"); 
+                
                 
         }
         }while(menu!=0);
