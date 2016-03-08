@@ -9,33 +9,50 @@ public class MainClass {
         ArrayList<Absensi> absen = new ArrayList();
         ArrayList<PerhitunganGaji> hitung = new ArrayList();
         DataKaryawan k1 = new DataKaryawan(101, "Paijo", 900, 200, 150, 75);
+        data.add(k1);
         DataKaryawan k2 = new DataKaryawan(102, "Lulu", 875, 200, 100, 100);
-        DataKaryawan k3 = new DataKaryawan(103, "Lala", 1000, 350, 200, 125);
+        data.add(k2);
+        DataKaryawan k3 = new DataKaryawan(103, "Lala", 1000, 350, 200, 125);  
+        data.add(k3);
         Absensi a1 = new Absensi(101, "15/01/2016", 8, 00, 17, 00);
+        absen.add(a1);
+        Absensi a11 = new Absensi(101, "16/01/2016", 8, 00, 18, 30);
+        absen.add(a11);
         Absensi a2 = new Absensi(102, "15/01/2016", 8, 00, 15, 00);
+        absen.add(a2);
         Absensi a3 = new Absensi(103, "15/01/2016", 8, 00, 17, 00);
+        absen.add(a3);
         PerhitunganGaji g1 = new PerhitunganGaji(101);
-        g1.hitungPokok(k1);
-        g1.hitungTambah(a1, k1);
-        g1.hitungTotal();
-        a1.absen("16/01/2016", 8, 0, 18, 30);
-        g1.hitungTambah(a1, k1);
-        g1.hitungTotal();
+        hitung.add(g1);
         PerhitunganGaji g2 = new PerhitunganGaji(102);
-        g2.hitungPokok(k2);
-        g2.hitungTambah(a2, k2);
-        g2.hitungTotal();
+        hitung.add(g2);
         PerhitunganGaji g3 = new PerhitunganGaji(103);
-        g3.hitungPokok(k3);
-        g3.hitungTambah(a3, k3);
-        g3.hitungTotal();
-        showData(k1,g1);
-        showData(k2,g2);
-        showData(k3,g3);
+        hitung.add(g3);
+        for (DataKaryawan K : data) {
+            for (Absensi A : absen) {
+                if (K.getNik() == A.getNik()) {
+                    for (PerhitunganGaji H : hitung) {
+                        if (K.getNik() == H.getNik()) {
+                            H.hitungPokok(K);
+                            H.hitungTambah(A, K);
+                            H.hitungTotal();
+
+                        }
+                    }
+                }
+            }
+        }
+        int i = 0;
+        System.out.printf("%-7s%-7s%7s%13s%10s%10s%10s\n","NIK","Nama","Gaji","Tunjangan","Bonus","Denda","Total");
+        for (DataKaryawan K : data) {
+            showData(K, hitung.get(i));
+            i++;
+        }
+
     }
 
     public static void showData(DataKaryawan K, PerhitunganGaji G) {
-        System.out.printf("%-7d%-7s%7d%7d%7d%7d%7d\n",K.getNik(),K.getNama(),K.getGaji(),K.getTunjangan(),
-                K.getBonus(),K.getDenda(),G.getTotal());
+        System.out.printf("%-7d%-7s%7d%10d%12d%11d%10d\n", K.getNik(), K.getNama(), K.getGaji(), K.getTunjangan(),
+                K.getBonus(), K.getDenda(), G.getTotal());
     }
 }
