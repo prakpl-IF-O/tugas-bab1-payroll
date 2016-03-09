@@ -5,7 +5,7 @@ public class Payroll {
 
     Calendar kal = Calendar.getInstance();
     private String nama, hariString;
-    private int nik, gaji, tunjangan, bonus, denda, totalgaji, jamMasuk, jamPulang, menitMasuk, menitPulang, hari, tanggal, tahun, bulan;
+    private int nik, gaji, tunjangan, bonus, totalbonus, denda, totalgaji, jamMasuk, jamPulang, menitMasuk, menitPulang, hari, tanggal, tahun, bulan;
 
     public void setHari(int thn, int bln, int tgl) {
         tahun = thn;
@@ -47,31 +47,47 @@ public class Payroll {
         this.menitPulang = menitPulang;
     }
 
-    public void setBonus() {
+    public void setBonusDenda() {
         if (hari == 6 || hari == 7) {
+            bonus = 0;
+            denda = 0;
             if (menitPulang >= menitMasuk) {
-                bonus += (jamPulang - jamMasuk) * 100;
+                bonus = (jamPulang - jamMasuk) * 100;
+                totalbonus += bonus;
             } else {
-                bonus += ((jamPulang - jamMasuk) - 1) * 100;
+                bonus = ((jamPulang - jamMasuk) - 1) * 100;
+                totalbonus += bonus;
             }
         } else if (jamMasuk <= 8) {
+            bonus = 0;
+            denda = 0;
             if (jamPulang >= 17) {
-                bonus += (jamPulang - 17) * 50;
+                bonus = (jamPulang - 17) * 50;
+                totalbonus += bonus;
             } else {
-                denda += 50;
+                denda = 50;
+                totalbonus -= denda;
             }
         } else {
-            denda += (jamMasuk - 8) * 50;
+            bonus = 0;
+            denda = 0;
+            denda = (jamMasuk - 8) * 50;
             if (jamPulang >= 17) {
-                bonus += (jamPulang - 17) * 50;
+                bonus = (jamPulang - 17) * 50;
+                totalbonus += bonus;
             } else {
                 denda += 50;
+                totalbonus -= denda;
             }
         }
     }
 
     public void setTotalgaji() {
-        totalgaji += (gaji + tunjangan + bonus) - denda;
+        totalgaji = (gaji + tunjangan) + totalbonus;
+    }
+
+    public int getTotalgaji() {
+        return totalgaji;
     }
 
     public String hariString() {
@@ -95,15 +111,18 @@ public class Payroll {
         }
     }
 
-    public void display() {
-        System.out.println("Nama : " + nama);
-        System.out.println("NIK : " + nik);
-        System.out.println("Gaji : " + gaji);
-        System.out.println("Tunjangan : " + tunjangan);
-        System.out.printf("Hari : %s ,%d-%d-%d\n", hariString(), tanggal, bulan, tahun);
-        System.out.printf("Jam : %02d:%02d s/d %02d:%02d\n", jamMasuk, menitMasuk, jamPulang, menitPulang);
-        System.out.println("Bonus : " + bonus);
-        System.out.println("Denda : " + denda);
-        System.out.println("Total Gaji : " + totalgaji);
+    public void displayData() {
+        System.out.println("~~~Data Karyawan~~~");
+        System.out.println("Nama\t\t: " + nama);
+        System.out.println("NIK\t\t: " + nik);
+        System.out.println("Gaji\t\t: " + gaji);
+        System.out.println("Tunjangan\t: " + tunjangan);
+    }
+
+    public void displayGaji() {
+        System.out.printf("Hari\t\t: %s ,%d-%d-%d\n", hariString(), tanggal, bulan, tahun);
+        System.out.printf("Jam\t\t: %02d:%02d s/d %02d:%02d\n", jamMasuk, menitMasuk, jamPulang, menitPulang);
+        System.out.println("Bonus\t\t: " + bonus);
+        System.out.println("Denda\t\t: " + denda);
     }
 }

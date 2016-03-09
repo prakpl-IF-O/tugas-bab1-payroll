@@ -3,7 +3,7 @@ public class mainPayroll {
 
     public static void main(String[] args) {
         String nama;
-        int nik, gaji, tunjangan, jamMasuk, jamPulang, menitMasuk, menitPulang, thn, bln, tgl;
+        int nik, gaji, tunjangan;
 
         Payroll karyawan0 = new Payroll();
         Payroll karyawan1 = new Payroll();
@@ -18,56 +18,24 @@ public class mainPayroll {
         karyawan0.setGaji(gaji);
         tunjangan = 300;
         karyawan0.setTunjangan(tunjangan);
-
-        nama = "Boni";
-        karyawan1.setNama(nama);
-        nik = 102;
-        karyawan1.setNik(nik);
-        gaji = 1100;
-        karyawan1.setGaji(gaji);
-        tunjangan = 300;
-        karyawan1.setTunjangan(tunjangan);
-
-        nama = "Cecep";
-        karyawan2.setNama(nama);
-        nik = 103;
-        karyawan2.setNik(nik);
-        gaji = 1200;
-        karyawan2.setGaji(gaji);
-        tunjangan = 300;
-        karyawan2.setTunjangan(tunjangan);
-
+        karyawan0.displayData();
+        System.out.println("");
+        System.out.println("~~~Absensi Karyawan~~~");
         //Absensi Karyawan
-        tgl = 9;
-        bln = 3;
-        thn = 2016;
-        karyawan0.setHari(thn, bln, tgl);
-        jamMasuk = 8;
-        karyawan0.setJamMasuk(jamMasuk);
-        menitMasuk = 00;
-        karyawan0.setMenitMasuk(menitMasuk);
-        jamPulang = 16;
-        karyawan0.setJamPulang(jamPulang);
-        menitPulang = 59;
-        karyawan0.setMenitPulang(menitPulang);
-        karyawan0.setBonus();
+        //format : {jamMasuk, menitMasuk, jamPulang, menitPulang}
+        int jam[][] = {{8, 0, 17, 0}, {9, 0, 16, 0}, {9, 0, 16, 0}};
+        //format : {tahun, bulan, tanggal}
+        int tgl[][] = {{2016, 3, 9}, {2016, 3, 12}, {2016, 3, 31}};
+        for (int i = 0; i < jam.length; i++) {
+            karyawan0.setJamMasuk(jam[i][0]);
+            karyawan0.setMenitMasuk(jam[i][1]);
+            karyawan0.setJamPulang(jam[i][2]);
+            karyawan0.setMenitPulang(jam[i][3]);
+            karyawan0.setHari(tgl[i][0], tgl[i][1], tgl[i][2]);
+            karyawan0.setBonusDenda();
+            karyawan0.displayGaji();
+        }
         karyawan0.setTotalgaji();
-        karyawan0.display();
-        tgl = 12;
-        bln = 3;
-        thn = 2016;
-        karyawan0.setHari(thn, bln, tgl);
-        jamMasuk = 8;
-        karyawan0.setJamMasuk(jamMasuk);
-        menitMasuk = 00;
-        karyawan0.setMenitMasuk(menitMasuk);
-        jamPulang = 9;
-        karyawan0.setJamPulang(jamPulang);
-        menitPulang = 00;
-        karyawan0.setMenitPulang(menitPulang);
-        karyawan0.setBonus();
-        karyawan0.setTotalgaji();
-        karyawan0.display();
-
+        System.out.println("Total gaji\t: " + karyawan0.getTotalgaji());
     }
 }
