@@ -1,5 +1,5 @@
 package pkgclass.object;
-
+import java.util.Calendar;
 public class karyawan {
     
     private int No, Gaji, Tunjangan, Bonus, Denda, totalbonus,denda_, totalgaji;
@@ -10,7 +10,18 @@ public class karyawan {
     int tahun[]={2016};
     String jmsk[]={"08.00"};
     String jplg[]={"17.00","18.30","15.00"};
-    private boolean libur[];
+    
+   private int tanggal1, bulan1, tahun1, d;
+   private String a;
+   
+   Calendar p=Calendar.getInstance();
+   public void setHari(int thn, int bln, int tgl){
+   tahun1=thn;
+   bulan1=bln;
+   tanggal1=tgl;
+   p.set(tgl, bln, tgl);
+   d=p.get(Calendar.DAY_OF_WEEK);
+   }
 
     public karyawan(int no, String nama, int gaji, int tunjangan, int bonus, int denda){
     No=no;
@@ -20,7 +31,7 @@ public class karyawan {
     Bonus=bonus;
     Denda=denda;    
     }
-        
+    
     public void tampilkan(){
         System.out.println("Nama\t\t\t: " + Nama);
         System.out.println("Masuk pada tanggal\t: ");
@@ -45,25 +56,25 @@ public class karyawan {
         System.out.println("Total Gaji\t\t: "+totalgaji());
         System.out.println("");
     }
-    
+   
     public int bonus(){
-    
+        
     if (Nama=="Lulu"){
         totalbonus=0;
     }
     else if (Nama=="Paijo"){
-    totalbonus=10*150;
+    totalbonus=(18-8)*150;
     }
     else if(Nama=="Lulu"){
-    totalbonus=0;
-    }return totalbonus;
-    }
-//    
+    totalbonus=0;}
+    return totalbonus;}
+    
+    
         
     
     public int denda(){
         if (Nama=="Lulu"){
-        denda_=2*100;
+        denda_=(17-15)*100;
         }
         else {
         denda_=0;
