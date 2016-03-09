@@ -15,13 +15,13 @@ public class MainGaji {
          ArrayList<karyawan> data=new ArrayList();
          karyawan kar1=new karyawan(101,"paijo",900,200,150,75);
          karyawan kar2=new karyawan(102,"lulu",875,200,100,100);
-         karyawan kar3=new karyawan(102,"lala",1000,350,200,125);
+         karyawan kar3=new karyawan(103,"lala",1000,350,200,125);
          
          ArrayList<DataKerja> DK=new ArrayList();
          DataKerja aa= new DataKerja(101,"2016-01-15",08.00,17.00);
          DataKerja bb= new DataKerja(101,"2016-01-16",08.00,18.30);
-         DataKerja cc= new DataKerja(101,"2016-01-15",08.00,15.00);
-         DataKerja dd= new DataKerja(101,"2016-01-15",08.00,17.00);
+         DataKerja cc= new DataKerja(102,"2016-01-15",08.00,15.00);
+         DataKerja dd= new DataKerja(103,"2016-01-15",08.00,17.00);
          
          cekHari a=new cekHari();
          cekHari b=new cekHari();
@@ -47,5 +47,6 @@ public class MainGaji {
         System.out.printf("%.0f\n",a3.getTotalGaji());
         kar3.TampilAkhir();
         System.out.printf("%.0f\n",a4.getTotalGaji());
+        //pada gaji paijo setengah jam dihitung sehingga hasilnya seperti pada tampilan
     }
 }

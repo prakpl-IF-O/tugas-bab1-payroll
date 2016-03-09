@@ -21,7 +21,7 @@ public class HitungGaji {
                 TotalGaji=(jampul-jamker)*bonus;
             }
             else {
-            TotalGaji=(jampul-jamker)*bonus;
+            TotalGaji=(jampul-jamker+.20)*bonus;
             }
         }
         else {
