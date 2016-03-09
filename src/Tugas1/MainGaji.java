@@ -47,6 +47,6 @@ public class MainGaji {
         System.out.printf("%.0f\n",a3.getTotalGaji());
         kar3.TampilAkhir();
         System.out.printf("%.0f\n",a4.getTotalGaji());
-        //pada gaji paijo setengah jam dihitung sehingga hasilnya seperti pada tampilan
+        //pada gaji paijo setengah jam dihitung sehingga hasilnya seperti pada output program
     }
 }
