@@ -33,11 +33,11 @@ public class HitungGaji {
         String tgl2 = df2.format(tgl1);
 
         String hari1 = paijo1.format(waktu);
-        String hari2 = paijo1.format(waktul);
-        String hari3 = paijo1.format(tgl2);
+        String hari2 = paijo1.format(waktu);
+        String hari3 = paijo1.format(waktu);
 
-        Boolean cek = waktu.equals(tgl2);
-        Boolean cek2 = waktul.equals(tgl2);
+        Boolean cek = hari1.equals(hari3);
+        Boolean cek2 = hari2.equals(hari3);
 
         if (cek2 == false || cek == false) {
 
@@ -61,19 +61,44 @@ public class HitungGaji {
         return denda;
     }
 
-    public double hitungTambahan(String hari, String awal, String akhir, int bonus, int denda) {
+    public double hitungBonus(String hari, String awal, String akhir, int ap) throws ParseException {
+        double bonus = 0;
+        JadwalKaryawan k1 = new JadwalKaryawan();
+        Date waktu = new Date(116, 0, 16);
+        Date waktul = new Date(116, 0, 17);
+        SimpleDateFormat paijo1 = new SimpleDateFormat("EEEE");
+        k1.setJadwal();
+        String tgl = hari;
+        DateFormat df = new SimpleDateFormat("MM-dd-yyyy");
+        Date tgl1 = df.parse(tgl);
+        DateFormat df2 = new SimpleDateFormat("yyyy-MM-dd");
+        String tgl2 = df2.format(tgl1);
 
-        double bns = 0;
+        String hari1 = paijo1.format(waktu);
+        String hari2 = paijo1.format(waktu);
+        String hari3 = paijo1.format(waktu);
 
-        String pulang = "17:00";
-        LocalTime pulang1 = LocalTime.parse(pulang);
-        LocalTime pulang2 = LocalTime.parse(akhir);
+        Boolean cek = hari1.equals(hari3);
+        Boolean cek2 = hari2.equals(hari3);
 
-        Boolean cek = pulang2.isAfter(pulang1);
+        if (cek2 == true || cek == true) {
 
-        if (cek = true) {
-            int waktu = pulang2.getHour() - pulang1.getHour();
-            bns = waktu * bonus;
+            String a = "08:00";
+            String b = "17:00";
+            LocalTime a2 = LocalTime.parse(awal);
+            LocalTime b2 = LocalTime.parse(akhir);
+            LocalTime a1 = LocalTime.parse(a);
+            LocalTime b1 = LocalTime.parse(b);
+
+            Boolean c = a1.isAfter(a2);
+            Boolean d = b1.isBefore(b2);
+            if (c == true || d == true) {
+
+                int waktu1 = a2.getHour() - a1.getHour();
+                int waktu2 = b1.getHour() - b2.getHour();
+
+                bonus = (waktu1 + waktu2) * ap;
+            }
         }
         return bonus;
     }
