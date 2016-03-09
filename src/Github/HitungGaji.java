@@ -57,6 +57,8 @@ public class HitungGaji {
 
                 denda = (waktu1 + waktu2) * ap;
             }
+        } else {
+            return 0;
         }
         return denda;
     }
@@ -83,22 +85,13 @@ public class HitungGaji {
 
         if (cek2 == true || cek == true) {
 
-            String a = "08:00";
-            String b = "17:00";
-            LocalTime a2 = LocalTime.parse(awal);
-            LocalTime b2 = LocalTime.parse(akhir);
-            LocalTime a1 = LocalTime.parse(a);
-            LocalTime b1 = LocalTime.parse(b);
+            String ao = awal;
+            String ba = akhir;
 
-            Boolean c = a1.isAfter(a2);
-            Boolean d = b1.isBefore(b2);
-            if (c == true || d == true) {
+            LocalTime b = LocalTime.parse(ao);
+            LocalTime c = LocalTime.parse(ba);
+        } else {
 
-                int waktu1 = a2.getHour() - a1.getHour();
-                int waktu2 = b1.getHour() - b2.getHour();
-
-                bonus = (waktu1 + waktu2) * ap;
-            }
         }
         return bonus;
     }
