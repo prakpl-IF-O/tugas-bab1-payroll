@@ -20,7 +20,10 @@ public class MAINCLASS {
     kry2.check_in(0, 8, 2016, 01, 15,  15, 102);
     kry3.check_in(0, 8, 2016, 01, 15,  17, 103);
     
-        //System.out.println(kry1.hasil_gaji());
+        
+        System.out.println("NIK \t Nama \t Gaji \t Tunjangan \t Bonus \t Denda \t Total Gaji");
+        System.out.println(kry1.hasil_gaji());
+        System.out.println(kry2.hasil_gaji());
         System.out.println(kry3.hasil_gaji());
     }
 }

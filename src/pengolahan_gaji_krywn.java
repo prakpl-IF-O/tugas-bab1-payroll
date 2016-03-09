@@ -93,13 +93,9 @@ public class pengolahan_gaji_krywn {
         }
         return denda_keseluruhan;
     }
-    public int hasil_gaji(){
+    public String hasil_gaji(){
         persensi();
-        System.out.println("Jumlah kedatangan : "+kedatangan);
-        System.out.println("gaji : " +gaji);
-        System.out.println("tunjangan : "+tunjangan);
-        System.out.println("bonus : "+bonus());
-        System.out.println("dnda : "+denda());
-        return ((gaji + tunjangan + bonus())- denda());
+        String hasil = (NIK +"\t"+ nama+"\t"+gaji+"\t"+tunjangan+"\t\t"+bonus()+"\t"+denda()+"\t"+((gaji + tunjangan + bonus())- denda()));
+        return hasil;
     }
 }
