@@ -21,5 +21,24 @@ public class MainKaryawan {
         k1.jamKeluar[1] = (18.5);
         k1.dendaPegawai1(k1.jamMasuk[1], k1.jamKeluar[1], k1.getDenda());
         k1.bonusPegawai1(k1.jamKeluar[1], k1.getBonus());
+        k1.totalGajiK();
+        
+        
+        DataKaryawan k2 = new DataKaryawan();
+        k2.setNik("102");
+        k2.setNama("lulu");
+        k2.setGaji(875);
+        k2.setTunjangan(200);
+        k2.setBonus(100);
+        k2.setDenda(100);
+        k2.tanggalPegawai[0] = "2016-01-15";
+        k2.jamMasuk[0] = (8);
+        k2.jamKeluar[0] = (15);
+        k2.dendaPegawai1(k1.jamMasuk[0], k1.jamKeluar[0], k1.getDenda());
+        k2.bonusPegawai1(k1.jamKeluar[0], k1.getBonus());
+        k2.tanggalPegawai[1] = null;
+        k2.totalGajiK();
+        
+        
     }
 }
