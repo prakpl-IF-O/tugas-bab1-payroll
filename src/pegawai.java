@@ -25,7 +25,7 @@ public class pegawai {
  int denda_semuanya = 0;
  int denda_ketepatan = 0;
  int bonus_semua = 0;
-    private int nik;
+ int total_bayaran = 0;
 public pegawai ( String nomer1, String pelanggaran1, String bayaran1, String bantuan1,String jeneng1, String untung1){
     bonus = untung1;
     String nama = jeneng1;
@@ -40,7 +40,7 @@ public pegawai ( String nomer1, String pelanggaran1, String bayaran1, String ban
     hari [rangkaian] = hari1;
     bulan [rangkaian] = bulan1;
     tahun [rangkaian] = tahun1;
-    nomer_kehadiran [rangkaian] = nik ;
+    nomer_kehadiran [rangkaian] = ;
     } 
     public int pelanggaran_masuk (int rangkaian){
         if (jam_masuk[rangkaian]<=8) {
@@ -72,9 +72,4 @@ public pegawai ( String nomer1, String pelanggaran1, String bayaran1, String ban
                 }
             return 0;
         }
-
-    void datang(int i, int i0, int i1, int i2, int i3, int i4, int i5) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }
