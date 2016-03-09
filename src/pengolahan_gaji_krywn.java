@@ -8,12 +8,12 @@
  *
  * @author Enggar Pratama
  */
-public class pengolahan_gaji_krywn {
-    private int NIK;
-    private int nama;
-    private int gaji;
-    private int bonus;
-    private int denda;
+public class pengolahan_gaji_krywn {    
+    private int NIK;    
+    private int nama;    
+    private int gaji;    
+    private int bonus;    
+    private int denda;    
     private int hasil_gaji;
     
 }
