@@ -14,7 +14,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 public class kalender {
-public class ceheckingcalender {
+
+
     public int ceheckingcalender(String kal){
         SimpleDateFormat ubah = new SimpleDateFormat("yyyy-MM-dd");//benerin formatnya
         int kalender = 0;
@@ -26,5 +27,5 @@ public class ceheckingcalender {
         }   
         catch (ParseException ex) {ex.printStackTrace();}
         return kalender;}
-}
+
 }

@@ -8,16 +8,16 @@
  *
  * @author luthfi
  */
-public class hitunggaji {
+public class hitunggaji {//kurang fix tapi berjalan
    private double jumlah_gaji;
     private double denda1;
     private double denda2;
-    private double bonus;
+    private double bonusgaji;
 
     public void hitunggaji(int hr, double jam_in, double jam_out, int bonus, int denda, int gaji, int tunjangan) {
-    if (hr == 1 || hr == 7) {
-            double a = (jam_out - jam_in) / 0.30;
-            if (a % 2 == 0) {
+    if (hr == 1 || hr == 7) {// minggu =1 sabtu = 7 
+            double i = (jam_out - jam_in) / 0.30;
+            if (i % 2 == 0) {
                 jumlah_gaji = (jam_out - jam_in) * bonus;
             } else {
                 jumlah_gaji = (jam_out - jam_in + 0.20) * bonus;
@@ -31,14 +31,14 @@ public class hitunggaji {
                 denda2=(17.00-jam_out)*denda;
             }
             if (jam_out>17.00) {
-                bonus=(int) ((jam_out-17.00)*bonus);   
+                bonusgaji=(int) ((jam_out-17.00)*bonus);   
             }
-        jumlah_gaji=(gaji+tunjangan+bonus)-(denda1+denda2);
+        jumlah_gaji=(gaji+tunjangan+bonusgaji)-(denda1+denda2);
         }
     }
 
     public double gettotalgaji() {
-        return jumlah_gaji;
+        return jumlah_gaji;// total sudah pas
     }
 
 }
