@@ -47,12 +47,12 @@ else if ((a-2)%7==0){
     hari=true;
 }
 }
-
+public void displaymessage(){
+    System.out.println(nik+"," + nama + "," + gaji + "," + tunjangan + "," + bonus + "," + denda);
 }
 
+public void displaytotal(){
+    System.out.println(nik + "," + nama + "," + gaji + "," + tunjangan + "," + bonus + "," + denda);
+}
 
-
-
- 
-    
-
+}
