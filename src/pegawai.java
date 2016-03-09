@@ -11,10 +11,10 @@
 public class pegawai {
  private int NIK;
  private int denda;
- private String gaji;
- private String tunjangan;
+ private int gaji;
+ private int tunjangan;
  private String nama;
- private String bonus;
+ private int bonus;
  private int jam_masuk [] = new int [9] ;
  private int jam_keluar [] = new int [9];
  private int hari [] = new int [9];
@@ -26,8 +26,9 @@ public class pegawai {
  int denda_ketepatan = 0;
  int bonus_semua = 0;
  int total_bayaran = 0;
+    boolean total_gaji;
 public pegawai ( String nomer1, String pelanggaran1, String bayaran1, String bantuan1,String jeneng1, String untung1){
-    bonus = untung1;
+    String bonus = untung1;
     String nama = jeneng1;
     String tunjangan = bantuan1;
     String gaji = bayaran1;
@@ -40,7 +41,6 @@ public pegawai ( String nomer1, String pelanggaran1, String bayaran1, String ban
     hari [rangkaian] = hari1;
     bulan [rangkaian] = bulan1;
     tahun [rangkaian] = tahun1;
-    nomer_kehadiran [rangkaian] = ;
     } 
     public int pelanggaran_masuk (int rangkaian){
         if (jam_masuk[rangkaian]<=8) {
@@ -72,4 +72,9 @@ public pegawai ( String nomer1, String pelanggaran1, String bayaran1, String ban
                 }
             return 0;
         }
+        public String total(){
+            total_bayaran = gaji + (bonus+ tunjangan - denda) ;
+     return null;
+        }
+        
 }

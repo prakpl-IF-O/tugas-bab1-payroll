@@ -20,9 +20,9 @@ public class MAIN {
         pegawai3.datang(0, 8, 17, 1, 15, 2016 );
     
         System.out.println("NIK \t nama \t gaji \t tunjangan\t bonus\t dnda\t total_bayaran ");
-        System.out.println();
-        System.out.println("  ");
-        System.out.println("  ");
+        System.out.println(pegawai1.total_gaji);
+        System.out.println(pegawai2.total_gaji);
+        System.out.println(pegawai3.total_gaji);
     
     }
  
