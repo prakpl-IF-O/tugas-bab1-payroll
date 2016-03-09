@@ -22,17 +22,26 @@ public class GajiPaijo {
 
      }
      */
+    public double dendaPaijo() throws ParseException {
+        HitungGaji m2 = new HitungGaji();
+
+        double denda = m2.hitungDenda("2016-01-15", "08:00", "17:00", 75);
+        return denda;
+
+    }
+
     public static void main(String[] args) throws ParseException {
         HitungGaji m2 = new HitungGaji();
-        double a = m2.hitungDenda("2016-01-11", "10:00", "17:00", 75);
-        System.out.println(a);
+        double denda = m2.hitungDenda("2016-01-15", "08:00", "17:00", 75);
+        System.out.println(denda);
 
-        double b = m2.hitungBonus("2016-01-15", "08:00", "18:00", 150);
-        System.out.println(b);
+        double bonus2 = m2.hitungBonus("2016-01-15", "08:00", "17:00", 150);
+        System.out.println(bonus2);
 
-        double c = m2.hitungBonus("2016-01-15", "08:00", "18:00", 150);
-        System.out.println(c);
-        
-        
+        double bonus1 = m2.hitungBonus("2016-01-16", "08:00", "18:30", 150);
+
+        System.out.println(bonus1);
+        double gajiPaijo = 900 + 200 + bonus1 + bonus2 - denda;
+        System.out.println(gajiPaijo);
     }
 }
