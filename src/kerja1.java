@@ -32,7 +32,7 @@ public class kerja1 {
         System.out.println("========================");
         Kerja k3 = new Kerja ();
         k3.setKaryawan("Zaki","1571", 1500,200);
-        k3.setAbsensi(17,01,2016, 8.00,15.00);
+        k3.setAbsensi(14,01,2016, 7.00,15.00);
         k3.getBonus();
         k3.getDenda();
         k3.getTotal();

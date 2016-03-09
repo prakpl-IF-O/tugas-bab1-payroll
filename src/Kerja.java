@@ -1,13 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author user
- */
 public class Kerja {
     private String Nama;
     private String nik;
@@ -18,9 +8,9 @@ public class Kerja {
     private double denda1;
     private double denda2;
     private double denda3;
-    private double tanggal;
-    private double bulan;
-    private double tahun;
+    private int tanggal;
+    private int bulan;
+    private int tahun;
     private double jammsk;
     private double jamplg;
     private double total;
@@ -31,7 +21,7 @@ public class Kerja {
         gaji=o;
         tunjangan=o;
     }
-    public void setAbsensi(double t,double b, double x, double j, double i){
+    public void setAbsensi(int t,int b, int x, double j, double i){
         tanggal=t;
         bulan=b;
         tahun=x;
@@ -40,18 +30,22 @@ public class Kerja {
         
     }
     public void getBonus(){
-        if ( tanggal==15){
+        if ( tanggal==16||tanggal==17||tanggal==2||tanggal==3||tanggal==9||
+                tanggal==10||tanggal==23||tanggal==24||tanggal==30||
+                tanggal==31){
+            bonus=(jamplg-jammsk)*50;
+        } else {
         if ( jamplg > 17){
         bonus=(jamplg-17) * 50;   
     } else {
             bonus=0;
         }
-    }  else if ( tanggal==16||tanggal==17){
+    } if ( tanggal==16||tanggal==17){
             bonus=(jamplg-jammsk)*50;
         } 
         }
     public void getDenda (){
-        if ( tanggal==15){
+        if ( tanggal==15||tanggal==14){
         denda1= jammsk-8;
         denda2= 17 - jamplg;
         if (jamplg < 17 && jammsk > 8){
@@ -82,6 +76,9 @@ public class Kerja {
     public void display (){
         System.out.println("Nama Karyawan   :"+ Nama);
         System.out.println("Nik Karyawan    :"+ nik);
+        System.out.println("Pada tanggal    :"+tanggal+"-"+bulan+"-"+tahun);
+        System.out.println("Masuk Jam       :"+jammsk);
+        System.out.println("Pulang jam      :"+jamplg);
         System.out.println("Gaji Karyawan   :"+ gaji);
         System.out.println("Tunjangan       :"+tunjangan);
         System.out.println("Bonus           :"+bonus);
