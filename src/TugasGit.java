@@ -17,3 +17,11 @@ public class TugasGit {
         System.out.println("102,lulu," + g_lulu + "," + t_lulu + "," + b_lulu + "," + d_lulu);
         System.out.println("103,lala," + g_lala + "," + t_lala + "," + b_lala + "," + d_lala);
     }
+
+    public void Absensi() {
+        System.out.println("nik,tanggal,jam_masuk,jam_pulang");
+        System.out.println("101," + "07-03-2016," + "0" + jampaijo + ":00" + "," + jamkpaijo2 + ":00");
+        System.out.println("101," + "08-03-2016," + "0" + jampaijo + ":00" + "," + jamkpaijo2 + ":00");
+        System.out.println("102," + "17-02-2016," + "0" + jamlulu + ":00" + "," + jamklulu + ":00");
+        System.out.println("103," + "23-02-2016," + "0" + jamlala + ":00" + "," + jamklala + ":00");
+    }
