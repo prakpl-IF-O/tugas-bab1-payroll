@@ -1,21 +1,29 @@
 
 public class Payroll {
- double nik,gaji,tunjangan,bonus,denda;
- String namaP,namaLu,namaLa;
- //int []nik = {101,102,103};
- //String [] nama ={"paijo","lulu","lala"};
  
- public void setNamaP(String n){
-     namaP=n;
+ double gajiP,gajiLu,gajiLa;
+ int []nik = {101,102,103};
+ String [] nama ={"paijo","lulu","lala"};
+ 
+ 
+ public void setgajiP(double n){
+     gajiP=n;
  }
- public void setNamaLu(String lu){
-     namaLu=lu;
+ public void setgajiLa(double lu){
+     gajiLu=lu;
  }
- public void setNamaLa(String la){
-     namaLa=la;
+ public void setgajiLu(double la){
+     gajiLa=la;
  }
- public void display(double d){
-     
+ public void display(){
+     for(int i=0;i<3;i++){
+     System.out.println("Nama : "+nama[i]+" "+"nik : " +nik[i]);   
+     }
+ }
+ public void display2(){
+     System.out.println(gajiP);
+     System.out.println(gajiLa);
+     System.out.println(gajiLu);
  }
          
 }
