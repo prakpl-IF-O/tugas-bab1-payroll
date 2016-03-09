@@ -43,4 +43,7 @@ public class Karyawan {
     public short getBonus(){
         return bonus;
     }
+    public int totalGaji(){
+        return (gaji + tunjangan + bonus) - denda;
+    }
 }
