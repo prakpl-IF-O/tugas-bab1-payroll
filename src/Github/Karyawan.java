@@ -13,7 +13,7 @@ public class Karyawan {
 
     public int data[][] = new int[3][4];
 
-    public int dataKaryawan() {
+    public void dataKaryawan() {
         data[0][0] = 900;
         data[0][1] = 200;
         data[0][2] = 150;
@@ -26,7 +26,7 @@ public class Karyawan {
         data[2][1] = 300;
         data[2][2] = 200;
         data[2][3] = 125;
-        return data[0][0];
+        
     }
 
     public void dataDisplay1() {
