@@ -10,6 +10,9 @@
  */
 public class MAINCLASS {
     public static void main(String[] args) {
+    pengolahan_gaji_krywn kry1 = new pengolahan_gaji_krywn (101, "paijo", 900, 150, 125 , 200);
+    pengolahan_gaji_krywn kry2 = new pengolahan_gaji_krywn (101, "paijo", 900, 150, 125 , 200);
+    pengolahan_gaji_krywn kry3 = new pengolahan_gaji_krywn (101, "paijo", 900, 150, 125 , 200);
     
     }
 }

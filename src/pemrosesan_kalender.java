@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -15,5 +17,8 @@ public class pemrosesan_kalender {
     private String bulan;
     private String tahun;
     private String hari;
-    
+    public static void main(String[] args) {
+    Date date1 = (new GregorianCalendar(2016, Calendar.JANUARY, 16)).getTime();
+    System.out.println(new SimpleDateFormat("EEEE").format(date1));
+    }
 }
