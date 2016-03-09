@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class karyawan {
 
-    public static int totalgaji, tanggal, tanggal1, jm, jp, fin, find, y, t, nik, gaji, tunjangan, bonus, denda;
+    public static int totalgaji, tanggal, tanggal1, jm, jp, fin, find, y, t, nik, gaji, tunjangan, bonus, denda, denda1;
     public static String nama;
     public static double jp1;
     Calendar cal1 = Calendar.getInstance();
@@ -16,9 +16,7 @@ public class karyawan {
     }
 
     public void setJp1(double d) {
-        if (jp1 > 17.00) {
-        }
-
+        jp1 = d;
     }
 
     public void setTanggal(int i) {
@@ -55,13 +53,13 @@ public class karyawan {
     }
 
     public void setDenda(int i) {
-        if (jm > 8) {
-        }
+        if (jm > 8) 
         denda = i;
 
-        if (jp < 17) {
-        }
-        denda = i;
+        else if (jp < 17) 
+        denda = i 
+        ;
+        else denda1=0;
         Totalgaji();
     }
 
@@ -70,7 +68,7 @@ public class karyawan {
     }
 
     private void Totalgaji() {
-        totalgaji = (gaji + tunjangan + bonus) - denda;
+        totalgaji = (gaji + tunjangan + bonus) - denda1;
     }
 
     //calendar
@@ -83,9 +81,12 @@ public class karyawan {
         this.t = f;
 
     }
+    public void setcal(){
+        System.out.println("nik: "+nik+"\nstart\n"+cal1.getTime()+"\nend\n"+cal2.getTime());
+    }
 
     public void displayMessage() {
-        System.out.println(nik+","+nama+","+gaji+","+tunjangan+","+bonus+","+denda+","+totalgaji);
-            }
+        System.out.println(nik + "," + nama + "," + gaji + "," + tunjangan + "," + bonus + "," + denda + "," + totalgaji);
+    }
 
 }
