@@ -11,10 +11,10 @@ package payroll;
  */
 public class penghitungan {
 
-    double gajiAkhir, dendaTelat, dendaPulcep, bonusHoliday, bonusPulang;
+    private double gajiAkhir, dendaTelat, dendaPulcep, bonusHoliday, bonusPulang;
 
     public void prosesHitung(String today, int gaji, int tunjangan, int bonus, int denda, double jam_masuk, double jam_pulang) {
-        if (today.equals("minggu") || today.equals("sabtu")) {
+        if (today.equals("Minggu") || today.equals("Sabtu")) {
             double lamaKerja;
             lamaKerja = (jam_pulang - jam_masuk) - 0.30;
             if (lamaKerja % 2 == 0) {
@@ -26,9 +26,9 @@ public class penghitungan {
             }
         } else {
             double dt, dp, bp;
-            dt = (8.00 - jam_masuk) - 30;
-            dp = (17.00 - jam_pulang) - 30;
-            bp = (jam_pulang - 17.00) - 30;
+            dt = (8.00 - jam_masuk) - 0.30;
+            dp = (17.00 - jam_pulang) - 0.30;
+            bp = (jam_pulang - 17.00) - 0.30;
             if (jam_masuk > 8.00) {
                 if (dt % 2 == 0) {
                     dendaTelat = (8.00 - (jam_masuk + 0.2)) * denda;
@@ -50,7 +50,7 @@ public class penghitungan {
                     bonusPulang = (jam_pulang - 17.00) * bonus;
                 }
             }
-            gajiAkhir = (gaji + tunjangan + bonus) - (dendaTelat + dendaPulcep);
+            gajiAkhir = (gaji + tunjangan + bonusPulang) - (dendaTelat + dendaPulcep);
         }
     }
 
