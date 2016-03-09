@@ -10,5 +10,16 @@ package payroll;
  * @author Faza Abdi
  */
 public class dataKaryawan {
-    private String data[][]={{"101","paijo","900","200","150","75"},{"102","lulu","875","200","100","100"},{"103","lala","1000","350","200","125"}};
+
+    private int nik, gaji, tunjangan, bonus, denda;
+    private String nama;
+
+    public dataKaryawan(int a, String b, int c, int d, int e, int f) {
+        nik = a;
+        nama = b;
+        gaji = c;
+        tunjangan = d;
+        bonus = e;
+        denda = f;
+    }
 }
