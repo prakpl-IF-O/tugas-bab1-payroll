@@ -10,6 +10,6 @@
  */
 public class MAINCLASS {
     public static void main(String[] args) {
-        
+    
     }
 }
