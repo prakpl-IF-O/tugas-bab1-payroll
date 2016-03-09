@@ -1,18 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.HashSet;
+import java.util.Set;
 
 public class karyawan {
 
-    public static int totalgaji, jm, jp, nik, gaji, tunjangan, bonus, denda;
+    public static int totalgaji, tanggal, tanggal1, jm, jp, fin, find, y, t, nik, gaji, tunjangan, bonus, denda;
     public static String nama;
+    public static double jp1;
+    Calendar cal1 = Calendar.getInstance();
+    Calendar cal2 = Calendar.getInstance();
 
     public void setNik(int i) {
         nik = i;
+    }
+
+    public void setJp1(double d) {
+        if (jp1 > 17.00) {
+        }
+
+    }
+
+    public void setTanggal(int i) {
+        tanggal = i;
+    }
+
+    public void setTanggal1(int i) {
+        tanggal1 = i;
     }
 
     public void setJm(int i) {
@@ -34,11 +48,19 @@ public class karyawan {
     }
 
     public void setBonus(int i) {
+        if (jp1 > 17) {
+        }
         bonus = i;
         Totalgaji();
     }
 
     public void setDenda(int i) {
+        if (jm > 8) {
+        }
+        denda = i;
+
+        if (jp < 17) {
+        }
         denda = i;
         Totalgaji();
     }
@@ -46,19 +68,24 @@ public class karyawan {
     public void setNama(String s) {
         nama = s;
     }
-    private void Totalgaji(){
-        totalgaji=(gaji+tunjangan+bonus)-denda;
+
+    private void Totalgaji() {
+        totalgaji = (gaji + tunjangan + bonus) - denda;
+    }
+
+    //calendar
+    public void Calendar(int a, int s, int z, int x, int c, int d, int f) {
+        cal1.set(a, s, z, x, c, 0);
+        cal2.set(a, s, z, d, f, 0);
+        fin = d;
+        this.y = x;
+        find = c;
+        this.t = f;
+
     }
 
     public void displayMessage() {
-        System.out.println("Nama : "+nama);
-        System.out.println("NIK : "+nik);
-        System.out.println("Gaji : "+gaji);
-        System.out.println("Tunjangan : "+tunjangan);
-        System.out.println("Bonus : "+bonus);
-        System.out.println("Denda : "+ denda);
-        System.out.println("Total gaji : "+totalgaji);
-        System.out.println("========================");
-    }
+        System.out.println(nik+","+nama+","+gaji+","+tunjangan+","+bonus+","+denda+","+totalgaji);
+            }
 
 }
