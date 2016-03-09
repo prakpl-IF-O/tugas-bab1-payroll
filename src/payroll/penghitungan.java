@@ -25,7 +25,36 @@ public class penghitungan {
                 gajiAkhir = bonusHoliday;
             }
         } else {
-           
+            double dt, dp, bp;
+            dt = (8.00 - jam_masuk) - 30;
+            dp = (17.00 - jam_pulang) - 30;
+            bp = (jam_pulang - 17.00) - 30;
+            if (jam_masuk > 8.00) {
+                if (dt % 2 == 0) {
+                    dendaTelat = (8.00 - (jam_masuk + 0.2)) * denda;
+                } else {
+                    dendaTelat = (8.00 - jam_masuk) * denda;
+                }
+            }
+            if (jam_pulang < 17.00) {
+                if (dp % 2 == 0) {
+                    dendaPulcep = (17.00 - (jam_pulang + 0.2)) * denda;
+                } else {
+                    dendaPulcep = (17.00 - jam_pulang) * denda;
+                }
+            }
+            if (jam_pulang > 17.00) {
+                if (bp % 2 == 0) {
+                    bonusPulang = ((jam_pulang + 0.2) - 17.00) * bonus;
+                } else {
+                    bonusPulang = (jam_pulang - 17.00) * bonus;
+                }
+            }
+            gajiAkhir = (gaji + tunjangan + bonus) - (dendaTelat + dendaPulcep);
         }
+    }
+
+    public double getGajiAkhir() {
+        return gajiAkhir;
     }
 }
