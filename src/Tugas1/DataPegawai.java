@@ -18,13 +18,13 @@ public class DataPegawai {
     public double denda;
     public double jumdenda;
     public double jumlah;
-    public int masuk = 8;
-    public int keluar = 17;
+    public int masukkerja = 8;
+    public int keluarkerja = 17;
     double [] bon = new double [2];
     public String [] tanggal = new String[2];
-    double []masukjam = new double [2];
+    double []masukjamkerja = new double [2];
     double []bolosjam = new double [2];
-    double []keluarjam = new double [2];
+    double []keluarjamkerja = new double [2];
     double []telatjam = new double [2];
     double []jum = new double [2];
    
@@ -67,7 +67,7 @@ public class DataPegawai {
         if (tanggal[1]==null) {
         jumlah = (gaji + tunjangan)+ bon[0] + bon[1] - jumdenda;
         }else{
-         jumlah = (gaji+tunjangan)*2+ bon[0] + bon[1] - jumdenda;   
+         jumlah = (gaji + tunjangan)*2+ bon[0] + bon[1] - jumdenda;   
         } 
     }
     public void jumDenda1(double z){
@@ -131,14 +131,12 @@ public class DataPegawai {
         System.out.println("Gaji : Rp. " +gaji +"00");
         System.out.println("Tunjangan : Rp. " +tunjangan +"00");
         System.out.println("Hari Ke 1 : " +tanggal[0]);
-        System.out.println("Bonus 1 : " +bon[0] +"00");
+        System.out.println("Bonus 1 : " +bon[0]);
         System.out.println("Denda 1 : " +jum[0] +"00");
         System.out.println("Hari Ke 2 : " +tanggal[1]);
         System.out.println("Bonus 2 : " +bon[1] +"00");
-        System.out.println("Denda 2 : " +jum[1] +"00");
+        System.out.println("Denda 2 : " +jum[1]);
         System.out.println("===================== +");
         System.out.printf("%-10s : Rp. %.3f\n\n","Jumlah gaji yang Di dapat",jumlah);    
-
     }
 }   
-
