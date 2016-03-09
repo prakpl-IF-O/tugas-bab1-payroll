@@ -15,28 +15,13 @@ private int denda;
         this.bonus = bonus;
         this.denda = denda;
     }
-    public String getNik() {
-        return nik;
-    }
-
-    public String getNama() {
-        return nama;
-    }
-
-    public int getGaji() {
-        return gaji;
-    }
-
-    public int getTunjangan() {
-        return tunjangan;
-    }
-
-    public int getBonus() {
-        return bonus;
-    }
-
-    public int getDenda() {
-        return denda;
+    
+    public void display(){
+        System.out.print(nik+"  ");
+        System.out.print(nama+"  ");
+        System.out.print(tunjangan+"  ");
+        System.out.print(bonus+"  ");
+        System.out.print(denda+"  ");
     }
 
     }
