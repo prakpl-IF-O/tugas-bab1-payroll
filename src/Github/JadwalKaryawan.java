@@ -4,15 +4,19 @@
  * and open the template in the editor.
  */
 package Github;
-
+import java.util.Date;
+import java.text.SimpleDateFormat;
 /**
  *
  * @author dwiyan
  */
 public class JadwalKaryawan {
     
-    public static void main(String[] args) {
-        
-    }
+   private int data [][]= new int[3][4];
+   Date paijo = new Date();
+   Date lulu = new Date();
+   Date lala = new Date();
+   SimpleDateFormat paijo1 = new SimpleDateFormat("EEEE");
+   
     
 }
