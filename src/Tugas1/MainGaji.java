@@ -33,10 +33,19 @@ public class MainGaji {
         HitungGaji a3=new HitungGaji();
         HitungGaji a4=new HitungGaji();
         
-        a1.hirungGaji(a.CekHari("2016-01-15"), aa.getJamker(), aa.getJampul(),kar1.getBonus() , kar1.getDenda(), kar1.getGaji(), kar1.getTunjangan());
-        a2.hirungGaji(a.CekHari("2016-01-16"), bb.getJamker(), bb.getJampul(),kar1.getBonus() , kar1.getDenda(), kar1.getGaji(), kar1.getTunjangan());
-        a3.hirungGaji(a.CekHari("2016-01-15"), cc.getJamker(), cc.getJampul(),kar2.getBonus() , kar2.getDenda(), kar2.getGaji(), kar2.getTunjangan());
-        a4.hirungGaji(a.CekHari("2016-01-15"), dd.getJamker(), dd.getJampul(),kar3.getBonus() , kar3.getDenda(), kar3.getGaji(), kar3.getTunjangan());
+        a1.hitungGaji(a.CekHari("2016-01-15"), aa.getJamker(), aa.getJampul(),kar1.getBonus() , kar1.getDenda(), kar1.getGaji(), kar1.getTunjangan());
+        a2.hitungGaji(a.CekHari("2016-01-16"), bb.getJamker(), bb.getJampul(),kar1.getBonus() , kar1.getDenda(), kar1.getGaji(), kar1.getTunjangan());
+        a3.hitungGaji(a.CekHari("2016-01-15"), cc.getJamker(), cc.getJampul(),kar2.getBonus() , kar2.getDenda(), kar2.getGaji(), kar2.getTunjangan());
+        a4.hitungGaji(a.CekHari("2016-01-15"), dd.getJamker(), dd.getJampul(),kar3.getBonus() , kar3.getDenda(), kar3.getGaji(), kar3.getTunjangan());
         
+        double paijo=(a1.getTotalGaji()+a2.getTotalGaji());
+        
+        System.out.println("NIK\tNama\tgaji\ttunjangan\tbonus\tdenda\ttotal gaji");
+        kar1.TampilAkhir();
+        System.out.printf("%.0f\n",paijo);
+        kar2.TampilAkhir();
+        System.out.printf("%.0f\n",a3.getTotalGaji());
+        kar3.TampilAkhir();
+        System.out.printf("%.0f\n",a4.getTotalGaji());
     }
 }

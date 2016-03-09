@@ -14,7 +14,7 @@ public class HitungGaji {
     private double Denda1, Denda2;
     private double Bonus;
     
-    public void hirungGaji(int hari, double jamker, double jampul,int bonus,int denda,int gaji, int tunjangan){
+    public void hitungGaji(int hari, double jamker, double jampul,int bonus,int denda,int gaji, int tunjangan){
         if (hari==1||hari==7) {
             double a=(jampul-jamker)/30;
             if (a%2==0) {
@@ -36,5 +36,9 @@ public class HitungGaji {
             }
             TotalGaji=(gaji+tunjangan+Bonus)-(Denda1+Denda2);
         }
+    }
+
+    public double getTotalGaji() {
+        return TotalGaji;
     }
 }

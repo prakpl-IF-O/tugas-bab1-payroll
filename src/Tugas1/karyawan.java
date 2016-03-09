@@ -44,4 +44,8 @@ public class karyawan {
     public int getDenda() {
         return denda;
     }
+    
+    public void TampilAkhir(){
+        System.out.printf("%d\t%s\t%d\t%d\t\t%d\t%d\t",nik,nama,gaji,tunjangan,bonus,denda);
+    }
 }
