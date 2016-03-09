@@ -9,8 +9,8 @@
  * @author Win_8.1
  */
 public class pegawai {
- private String NIK;
- private String denda;
+ private int NIK;
+ private int denda;
  private String gaji;
  private String tunjangan;
  private String nama;
@@ -36,8 +36,21 @@ public pegawai ( String nomer1, String pelanggaran1, String bayaran1, String ban
     bulan [rangkaian] = bulan1;
     tahun [rangkaian] = tahun1;
     } 
-    public int pelanggaran_masuk (rangkaian){
-        if jam_masuk() 
+    public int pelanggaran_masuk (int rangkaian){
+        if (jam_masuk[rangkaian]<=8) {
+            return 0 ;
+        } 
+        else {
+            return ((jam_masuk[rangkaian] - 8) * denda );
+        }
     }
-  
+   public int pelanggaran_keluar (int rangkaian) {
+       if (jam_keluar[rangkaian]< 17) {
+           return ((17 - jam_keluar[rangkaian]) *denda);
+       }
+       else{
+           return 0;
+           
+       }
+   }
 }
