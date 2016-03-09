@@ -4,19 +4,49 @@
  * and open the template in the editor.
  */
 package Github;
+
 import java.util.Date;
 import java.text.SimpleDateFormat;
+
 /**
  *
  * @author dwiyan
  */
 public class JadwalKaryawan {
-    
-   private int data [][]= new int[3][4];
-   Date paijo = new Date();
-   Date lulu = new Date();
-   Date lala = new Date();
-   SimpleDateFormat paijo1 = new SimpleDateFormat("EEEE");
-   
-    
+
+    String data[][] = new String[4][4];
+
+    public void setJadwal() {
+
+        Date paijo = new Date(116, 0, 15);
+        Date paijo_ = new Date(116, 0, 16);
+        Date lulu = new Date(116, 0, 15);
+        Date lala = new Date(116, 0, 15);
+        SimpleDateFormat paijo1 = new SimpleDateFormat("EEEE");
+        SimpleDateFormat lulu1 = new SimpleDateFormat("EEEE");
+        SimpleDateFormat lala1 = new SimpleDateFormat("EEEE");
+        SimpleDateFormat hari = new SimpleDateFormat("yyyy-MM-dd");
+
+        data[0][0] = "101";
+        data[0][1] = hari.format(paijo);
+        data[1][0] = "101";
+        data[1][1] = hari.format(paijo_);
+        data[2][0] = "102";
+        data[2][1] = hari.format(lulu);
+        data[3][0] = "102";
+        data[3][1] = hari.format(lala);
+        
+
+    }
+
+    public void display(){
+        setJadwal();
+        System.out.println("nik,tanggal,jam_masuk,jam_pulang");
+        for (int x =0; x<data.length; x++){
+            for (int y=0; y<data[1].length;y++) {
+                System.out.print(data[x][y]+",");
+            }
+            System.out.println("");
+        }
+    }
 }
