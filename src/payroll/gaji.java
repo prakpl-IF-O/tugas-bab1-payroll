@@ -18,4 +18,5 @@ public class Gaji {
             if (jampul>17.00) {
                 Bonus=(jampul-17.00)*bonus;   }
         TotalGaji = ( gaji+tunjangan+Bonus )-(Denda+Dendax); }}
-}
+    public double getTotalGaji() {
+     return TotalGaji;}}
