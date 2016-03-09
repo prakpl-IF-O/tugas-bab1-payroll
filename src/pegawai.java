@@ -13,7 +13,7 @@ public class pegawai {
  private int denda;
  private int gaji;
  private int tunjangan;
- private String nama;
+ private int nama;
  private int bonus;
  private int jam_masuk [] = new int [9] ;
  private int jam_keluar [] = new int [9];
