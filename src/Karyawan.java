@@ -17,6 +17,7 @@ public class Karyawan {
         this.nama = nama;
         this.gaji = gaji;
         this.tunjangan = tunjangan;
+        this.bonus = bonus;
         this.denda = denda;
     }
     
