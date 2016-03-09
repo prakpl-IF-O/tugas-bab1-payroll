@@ -22,6 +22,8 @@ public class pengolahan_gaji_krywn {
     private int day [] = new int [5000];
     private int jam_kel [] = new int [5000];
     private int NIK_absensi[] = new int [5000];
+    private int kedatangan=0;
+    private int bonus_keseluruhan=0;
     public pengolahan_gaji_krywn(int NIK1, String nama1, int gaji1, int bonus1 , int denda1, int tunjangan1){
        NIK = NIK1;
        nama = nama1;
@@ -38,8 +40,22 @@ public class pengolahan_gaji_krywn {
        jam_kel[urutan] = jam_kel1;
        NIK_absensi[urutan] = NIK_absensi1;
     }
-    public int salary (int NIK){
-        
+    public void persensi (){
+        for ( int x = 0; x < 5000; x++ )
+        if (NIK_absensi[x] != 0 ){
+            kedatangan++;
+        }
     }
-    
+    public int bonus (){
+        for ( int x = 0;x< kedatangan; x++ ){
+            if (day[x] == 16){
+                bonus_keseluruhan = bonus_keseluruhan + ((jam_kel[x] - jam_mas[x]) * bonus );
+            }
+            else {
+                if (jam_kel[x] > 17)
+                    bonus_keseluruhan = bonus_keseluruhan + ((jam_kel[x] - 17 )* bonus );
+            }
+        }
+        return bonus_keseluruhan;
+    }
 }
