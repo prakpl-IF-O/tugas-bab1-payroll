@@ -25,4 +25,22 @@ public class Karyawan {
     public void setBonus(short a){
         bonus=a;
     }
+    public String getNama(){
+        return nama;
+    }
+    public short getNik(){
+        return nik;
+    }
+    public short getGaji(){
+        return gaji;
+    }
+    public short getDenda(){
+        return gaji;
+    }
+    public short getTunjangan(){
+        return tunjangan;
+    }
+    public short getBonus(){
+        return bonus;
+    }
 }
