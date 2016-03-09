@@ -14,9 +14,10 @@
  */
 public class Absensi {
    int nik;
-   String tanggal, jam_masuk, jam_pulang;
+   String tanggal; 
+   double jam_masuk, jam_pulang;
    
-   Absensi(int nik, String tanggal, String jam_masuk, String jam_pulang){
+   Absensi(int nik, String tanggal, double jam_masuk, double jam_pulang){
        this.nik = nik;
        this.tanggal = tanggal;
        this.jam_masuk = jam_pulang;

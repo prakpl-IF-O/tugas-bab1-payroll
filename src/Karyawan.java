@@ -12,7 +12,7 @@ public class Karyawan {
     int nik, gaji, tunjangan, bonus, denda;
     String nama;
     
-    Karyawan(int nik, String nama, int gaji, int tunjangan, int denda){
+    Karyawan(int nik, String nama, int gaji, int tunjangan,int bonus, int denda){
         this.nik = nik;
         this.nama = nama;
         this.gaji = gaji;
