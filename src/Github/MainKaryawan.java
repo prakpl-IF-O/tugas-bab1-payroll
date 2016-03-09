@@ -5,8 +5,6 @@
  */
 package Github;
 
-
-
 /**
  *
  * @author dwiyan
@@ -14,12 +12,20 @@ package Github;
 public class MainKaryawan {
 
     public static void main(String[] args) {
+        String data[][] = new String[4][4];
         Karyawan tampil = new Karyawan();
         JadwalKaryawan tampil1 = new JadwalKaryawan();
-        
+        HitungGaji tampil2 = new HitungGaji();
         tampil.dataDisplay1();
+        tampil.dataKaryawan();
+      
+      
         System.out.println("\n");
         tampil1.display();
-        
+        System.out.println("\n");
+        tampil1.setJadwal();
+        //System.out.println(data[0][0]);
+     //  System.out.println(data[4][4]);
+       //tampil2.hitungDenda(data[], null, ap)
     }
 }
