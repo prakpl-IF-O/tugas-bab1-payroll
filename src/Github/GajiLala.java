@@ -46,8 +46,8 @@ public class GajiLala {
         double bonus2 = m2.hitungBonus("2016-01-15", "08:00", "17:00", 200);
         System.out.println(bonus2);
 
-        double gajiPaijo = 1000 + 350 + bonus2 - denda;
-        System.out.println(gajiPaijo);
+        double gajiLala = 1000 + 350 + bonus2 - denda;
+        System.out.println(gajiLala);
     }
 
     public void lalaGaji() {
