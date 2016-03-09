@@ -14,6 +14,12 @@ public class MAIN {
         pegawai pegawai2 = new pegawai ("102", "100", "875", "200", "lulu", "100");
         pegawai pegawai3 = new pegawai ("103", "125", "1000", "350", "lala", "200");
         
+        pegawai1.datang(0, 8, 17, 1, 15, 2016,101 );
+        pegawai1.datang(1, 8, 18, 1, 16, 2016,101 );
+        pegawai2.datang(0, 8, 15, 1, 15, 2016, 102 );
+        pegawai3.datang(0, 8, 17, 1, 15, 2016,103 );
+    
+    
     }
  
 }
