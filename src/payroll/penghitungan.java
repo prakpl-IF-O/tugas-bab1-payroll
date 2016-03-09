@@ -54,7 +54,9 @@ public class penghitungan {
         }
     }
 
-    public double getGajiAkhir() {
-        return gajiAkhir;
+    public int getGajiAkhir() {
+        int a;
+        a=(int) gajiAkhir;
+        return a;
     }
 }
