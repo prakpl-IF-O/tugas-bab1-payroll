@@ -1,8 +1,8 @@
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import 
-
+import java.util.Calendar;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -20,13 +20,14 @@ import
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         double masuk = 08.00;
         double pulang = 17.00;
         double[] bonus = new double[3];
         double[] denda = new double[3];
         Karyawan k[] = new Karyawan[3];
         Absensi a[] = new Absensi[4];
+
 //        nik,nama,gaji,tunjangan,bonus,denda
         k[0] = new Karyawan(101, "paijo", 900, 200, 150, 75);
         k[1] = new Karyawan(102, "lulu", 875, 200, 100, 100);
@@ -37,26 +38,33 @@ public class Main {
         a[2] = new Absensi(102, "2016-01-15", 08.00, 15.00);
         a[3] = new Absensi(102, "2016-01-15", 08.00, 17.00);
 
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        SimpleDateFormat dateFormat1 = new SimpleDateFormat("EEEE");
+
+//        System.out.println(calendar.get(Calendar.DAY_OF_WEEK));
+//        String formatted = dateFormat.format(tanggal);
         for (int i = 0; i < 3; i++) {
             if (masuk < a[i].jam_masuk) {
-                denda[i] = k[i].denda * (a[i].jam_masuk - masuk);                
+                denda[i] = k[i].denda * (a[i].jam_masuk - masuk);
+            } else {
+                denda[i] = 0;
             }
-            else {
-                denda[i]=0;
+
+            if (pulang > a[i].jam_pulang) {
+                bonus[i] = 0;
+                denda[i] = (pulang - a[i].jam_pulang) * k[i].denda;
+            } else {
+                bonus[i] = (a[i].jam_pulang - pulang) * k[i].bonus;
+                denda[i] = 0;
             }
+            Date tanggal = dateFormat.parse(a[i].tanggal);
+            calendar.setTime(tanggal);
+            String tanggal1 = dateFormat1.format(calendar.getTime());
             
-            if (pulang>a[i].jam_pulang){
-                bonus[i]=0;
-                denda[i]=(pulang-a[i].jam_pulang)*k[i].denda;
+            if (tanggal1.equals("Saturday")||tanggal1.equals("Sunday")){
+                
             }
-            else {
-                bonus[i]=(a[i].jam_pulang-pulang)*k[i].bonus;
-                denda[i]=0;
-            }
-            
-           SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
-           Date tanggal = format.parse("2016-01-15");
-           Calender calender = Calender.getInstance();
         }
 
     }
