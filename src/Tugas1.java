@@ -1,5 +1,3 @@
-import java.util.Date;
-import java.text.SimpleDateFormat;
 public class Tugas1 {
     public int nik;
     public String nama;
