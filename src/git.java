@@ -18,7 +18,7 @@ public void calendar (int t, int b, int h,int jammu, int memu ,int jase,int mise
 tanggal1.set(t,b,h,jammu,memu,0);
 tanggal2.set(t,b,h,jase,mise,0);
 }
-public void setdenda(){
+public void setdenda(int x){
 if (jt>8){
     jt=(jt-8)*denda;    
 }
