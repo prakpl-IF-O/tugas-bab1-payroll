@@ -9,5 +9,9 @@
  * @author Win_8.1
  */
 public class MAIN {
-    
+    public static void main(String[] args) {
+        
+    }
+ 
 }
+   
