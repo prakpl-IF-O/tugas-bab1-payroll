@@ -36,8 +36,8 @@ public pegawai ( String nomer1, String pelanggaran1, String bayaran1, String ban
     bulan [rangkaian] = bulan1;
     tahun [rangkaian] = tahun1;
     } 
-    public int pelanggaran_masuk (){
-        
+    public int pelanggaran_masuk (rangkaian){
+        if jam_masuk() 
     }
   
 }
