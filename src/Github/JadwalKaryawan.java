@@ -17,11 +17,11 @@ import java.time.LocalDate;
  * @author dwiyan
  */
 public class JadwalKaryawan {
-    
+
     String data[][] = new String[4][4];
-    
+
     public void setJadwal() {
-        
+
         Date paijo = new Date(116, 0, 15);
         Date paijo_ = new Date(116, 0, 16);
         Date lulu = new Date(116, 0, 15);
@@ -35,20 +35,27 @@ public class JadwalKaryawan {
         LocalTime paijo1Masuk = LocalTime.of(8, 0);
         LocalTime luluMasuk = LocalTime.of(8, 0);
         LocalTime lalaMasuk = LocalTime.of(8, 0);
-        
+
         data[0][0] = "101";
         data[0][1] = hari.format(paijo);
-        //data[0][3] = a.format(paijoMasuk);
+        data[0][2] = "08:00";
+        data[0][3] = "17:00";
         data[1][0] = "101";
         data[1][1] = hari.format(paijo_);
+        data[1][2] = "08:00";
+        data[1][3] = "18:30";
         data[2][0] = "102";
+
+        data[2][2] = "08:00";
+        data[2][3] = "15:00";
         data[2][1] = hari.format(lulu);
         data[3][0] = "102";
         data[3][1] = hari.format(lala);
-        // data[4]
+        data[3][2] = "08:00";
+        data[3][3] = "17:00";
 
     }
-    
+
     public void display() {
         setJadwal();
         System.out.println("nik,tanggal,jam_masuk,jam_pulang");
