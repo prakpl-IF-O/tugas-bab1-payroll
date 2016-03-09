@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tugasPayroll;
-
-/**
- *
- * @author Fariz
- */
 public class absensi {
-    
+private String nik;
+private String tanggal;
+private double jamAwal;
+private double jamAkhir;
+
+public void absensi(String nik, String tanggal,double jamAwal, double jamAkhir){
+    this.nik = nik;
+    this.tanggal = tanggal;
+    this.jamAkhir = jamAkhir;
+    this.jamAwal = jamAwal;
+}
+
 }
