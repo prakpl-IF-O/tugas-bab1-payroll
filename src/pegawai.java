@@ -20,7 +20,8 @@ public class pegawai {
  private int hari [] = new int [9];
  private int bulan [] = new int [9];
  private int tahun [] = new int [9];
- 
+ int denda_semuanya = 0;
+ int denda_ketepatan = 0;
 public pegawai ( String nomer1, String pelanggaran1, String bayaran1, String bantuan1,String jeneng1, String untung1){
     bonus = untung1;
     String nama = jeneng1;
@@ -48,9 +49,14 @@ public pegawai ( String nomer1, String pelanggaran1, String bayaran1, String ban
        if (jam_keluar[rangkaian]< 17) {
            return ((17 - jam_keluar[rangkaian]) *denda);
        }
-       else{
+       else
            return 0;
-           
        }
+       public int denda (){
+           for (int a=0; a<ketepatan; a++) {
+           denda_semuanya += pelanggaran_masuk(a);
+           denda_semuanya += pelanggaran_keluar(a);
+           } return denda_semuanya;
    }
+        
 }
