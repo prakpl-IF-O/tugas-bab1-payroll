@@ -25,19 +25,19 @@ public class HitungGaji {
         Date waktu = new Date(116, 0, 16);
         Date waktul = new Date(116, 0, 17);
         SimpleDateFormat paijo1 = new SimpleDateFormat("EEEE");
-        k1.setJadwal();
+       
         String tgl = hari;
-        DateFormat df = new SimpleDateFormat("MM-dd-yyyy");
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         Date tgl1 = df.parse(tgl);
-        DateFormat df2 = new SimpleDateFormat("yyyy-MM-dd");
+        DateFormat df2 = new SimpleDateFormat("EEEE");
         String tgl2 = df2.format(tgl1);
 
         String hari1 = paijo1.format(waktu);
-        String hari2 = paijo1.format(waktu);
-        String hari3 = paijo1.format(waktu);
+        String hari2 = paijo1.format(waktul);
+       // String hari3 = paijo1.format(tgl2);
 
-        Boolean cek = hari1.equals(hari3);
-        Boolean cek2 = hari2.equals(hari3);
+        Boolean cek = hari1.equals(tgl2);
+        Boolean cek2 = hari2.equals(tgl2);
 
         if (cek2 == false || cek == false) {
 
@@ -69,35 +69,35 @@ public class HitungGaji {
         Date waktu = new Date(116, 0, 16);
         Date waktul = new Date(116, 0, 17);
         SimpleDateFormat paijo1 = new SimpleDateFormat("EEEE");
-        k1.setJadwal();
+        System.out.println(waktu);
         String tgl = hari;
-        DateFormat df = new SimpleDateFormat("MM-dd-yyyy");
+        DateFormat df = new SimpleDateFormat("yyyy-mm-dd");
         Date tgl1 = df.parse(tgl);
-        DateFormat df2 = new SimpleDateFormat("yyyy-MM-dd");
+        DateFormat df2 = new SimpleDateFormat("EEEE");
         String tgl2 = df2.format(tgl1);
-
+        System.out.println(tgl2);
         String hari1 = paijo1.format(waktu);
-        String hari2 = paijo1.format(waktu);
-        String hari3 = paijo1.format(waktu);
-
-        Boolean cek = hari1.equals(hari3);
-        Boolean cek2 = hari2.equals(hari3);
-
+        String hari2 = paijo1.format(waktul);
+        
+        System.out.println(hari1+" "+hari2);
+        Boolean cek = hari1.equals(tgl2);
+        Boolean cek2 = hari2.equals(tgl2);
+        String satu = awal;
+        String dua = akhir;
+        String rule = "17:00";
+        LocalTime f = LocalTime.parse(rule);
+        LocalTime b = LocalTime.parse(satu);
+        LocalTime c = LocalTime.parse(dua);
         if (cek2 == true || cek == true) {
 
-            String ao = awal;
-            String ba = akhir;
+            int d = c.getHour() - b.getHour();
+            return ap * d;
 
-            LocalTime b = LocalTime.parse(ao);
-            LocalTime c = LocalTime.parse(ba);
         } else {
 
+            int e = c.getHour() - f.getHour();
+            return e*ap;
         }
-        return bonus;
-    }
 
-    public double bonusWeekend(String a) {
-
-        return 0;
     }
 }
