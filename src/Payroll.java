@@ -1,13 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author dessy
- */
 public class Payroll {
-    
+ double nik,gaji,tunjangan,bonus,denda;
+ String nama;
+ 
+ public void setNik(double n){
+     nik=n;
+ }
+ public void setNama(String na){
+     nama=na;
+ }
+ public void setGaji(double g){
+     gaji=g;
+ }
+ public void setTunjangan(double t){
+     tunjangan=t;
+ }
+ 
+         
 }
