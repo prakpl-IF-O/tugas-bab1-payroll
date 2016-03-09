@@ -13,7 +13,7 @@ public class pengolahan_gaji_krywn {
     private String nama;    
     private int gaji;    
     private int bonus;    
-    private int denda;    
+    private int denda=0;    
     private int hasil_gaji;
     private int tunjangan;
     private int jam_mas[] = new int [5000];
@@ -37,9 +37,9 @@ public class pengolahan_gaji_krywn {
        jam_mas[urutan] = jam_mas1;
        year[urutan] = year1;
        month[urutan] = month1;
-       day[urutan] = day1;
+       day[urutan] = day1; 
        jam_kel[urutan] = jam_kel1;
-        System.out.println("Jam kel urutan "+urutan+" adalah "+jam_kel[urutan]);
+        //System.out.println("Jam kel urutan "+urutan+" adalah "+jam_kel[urutan]);
        NIK_absensi[urutan] = NIK_absensi1;
     }
     public void persensi(){
@@ -47,10 +47,13 @@ public class pengolahan_gaji_krywn {
         if (NIK_absensi[x] == 0 ){
         }
         else{
-        kedatangan++;}
+        kedatangan++;
+          //  System.out.println(jam_kel[x]);
+        }
     }
     public int bonus(){
         for ( int x = 0;x< kedatangan; x++ ){
+            bonus_keseluruhan = 0;
             if (day[x] == 16){
                 bonus_keseluruhan += ((jam_kel[x] - jam_mas[x]) * bonus );
             }
@@ -62,13 +65,13 @@ public class pengolahan_gaji_krywn {
         return bonus_keseluruhan;
     }
     public int denda_kel(int urutan){
-        if ( jam_kel[urutan] >= 17 ){
-            return 0 ;
+        //System.out.println("urutan "+urutan);
+        //System.out.println("jam kel "+jam_kel[urutan]);
+        if ( jam_kel[urutan] < 17 ){            
+            return ((17 - jam_kel[urutan])* denda);
         }
         else {
-            int dendas = ((17 - jam_kel[urutan])* denda);
-            //System.out.println("jam kel"+jam_kel[2]);
-            return dendas;
+            return 0;
         }
     }
     public int denda_mas (int urutan){
@@ -85,6 +88,7 @@ public class pengolahan_gaji_krywn {
             denda_keseluruhan += denda_mas(x);
             //System.out.println("Denda masuk : "+ denda_keseluruhan);
             denda_keseluruhan += denda_kel(x);
+            //System.out.println("Denda keluar : "+denda_kel(x)); 
             //System.out.println("Denda keluar : "+ denda_keseluruhan);
         }
         return denda_keseluruhan;

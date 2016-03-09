@@ -17,9 +17,10 @@ public class MAINCLASS {
 
     kry1.check_in(0, 8, 2016, 01, 15,  17, 101);
     kry1.check_in(1, 8, 2016, 01, 16,  18, 101);
-    kry2.check_in(2, 8, 2016, 01, 15,  15, 102);
-    kry3.check_in(3, 8, 2016, 01, 15,  17, 103);
+    kry2.check_in(0, 8, 2016, 01, 15,  15, 102);
+    kry3.check_in(0, 8, 2016, 01, 15,  17, 103);
     
-        System.out.println(kry2.hasil_gaji());
+        //System.out.println(kry1.hasil_gaji());
+        System.out.println(kry3.hasil_gaji());
     }
 }
