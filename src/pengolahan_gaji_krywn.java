@@ -54,7 +54,8 @@ public class pengolahan_gaji_krywn {
     public int bonus(){
         for ( int x = 0;x< kedatangan; x++ ){
             bonus_keseluruhan = 0;
-            if (day[x] == 16){
+            kalender kal = new kalender();
+            if (kal.hari_libur(day[x])){
                 bonus_keseluruhan += ((jam_kel[x] - jam_mas[x]) * bonus );
             }
             else {
