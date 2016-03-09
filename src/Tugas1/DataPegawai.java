@@ -71,10 +71,10 @@ public class DataPegawai {
         } 
     }
     public void jumDenda1(double z){
-    jum[0] = (telatjam[0]+bolosjam[0])*z;  
+        jum[0] = (telatjam[0]+bolosjam[0])*z;  
     }
     public void jumDenda2(double z){
-    jum[1] = (telatjam[1]+bolosjam[1])*z;  
+        jum[1] = (telatjam[1]+bolosjam[1])*z;  
     }
     public void jumlahdenda(){
         jumdenda = jum[0]+jum[1];
