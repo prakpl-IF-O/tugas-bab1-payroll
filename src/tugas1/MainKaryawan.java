@@ -16,6 +16,7 @@ public class MainKaryawan {
         k1.jamKeluar[0] = (17);
         k1.dendaPegawai1(k1.jamMasuk[0], k1.jamKeluar[0], k1.getDenda());
         k1.bonusPegawai1(k1.jamKeluar[0], k1.getBonus());
+       k1.totalGajiK();
         k1.tanggalPegawai[1] = "2016-01-15";
         k1.jamMasuk[1] = (8);
         k1.jamKeluar[1] = (18.5);
@@ -38,6 +39,21 @@ public class MainKaryawan {
         k2.bonusPegawai1(k1.jamKeluar[0], k1.getBonus());
         k2.tanggalPegawai[1] = null;
         k2.totalGajiK();
+        
+        DataKaryawan k3 = new DataKaryawan();
+        k3.setNik("103");
+        k3.setNama("lala");
+        k3.setGaji(1000);
+        k3.setTunjangan(350);
+        k3.setBonus(200);
+        k3.setDenda(125);
+        k3.tanggalPegawai[0] = "2016-01-15";
+        k3.jamMasuk[0] = (8);
+        k3.jamKeluar[0] = (17);
+        k3.dendaPegawai1(k1.jamMasuk[0], k1.jamKeluar[0], k1.getDenda());
+        k3.bonusPegawai1(k1.jamKeluar[0], k1.getBonus());
+        k3.tanggalPegawai[1] = null;
+        k3.totalGajiK();
         
         
     }
