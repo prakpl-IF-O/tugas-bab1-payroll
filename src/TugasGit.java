@@ -10,3 +10,10 @@ public class TugasGit {
     int d_paijo = 75, d_lulu = 100, d_lala = 125;
     int jampaijo = 8, jamlulu = 8, jamlala = 8, jamkpaijo = 20, jamklulu = 20, jamkpaijo2 = 17, jamklala = 17;
     int jam;
+
+    public void DataKaryawan() {
+        System.out.println("nik,nama,gaji,tunjangan,bonus,denda");
+        System.out.println("101,paijo," + g_paijo + "," + t_paijo + "," + b_paijo + "," + d_paijo);
+        System.out.println("102,lulu," + g_lulu + "," + t_lulu + "," + b_lulu + "," + d_lulu);
+        System.out.println("103,lala," + g_lala + "," + t_lala + "," + b_lala + "," + d_lala);
+    }
