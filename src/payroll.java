@@ -5,8 +5,9 @@ public class payroll {
     private int Tunjangan;
     private int Bonus;
     private int Denda;
-    private int TotalGaji;
-            
+    private double TotalGaji;
+    private int jmlDenda;
+    private double jmlBonus;
     
     public void setNik (String s){
         Nik=s;
@@ -39,22 +40,33 @@ public class payroll {
     public int getBonus(){
         return Bonus;
     }
+    public void setBonusgaji(int h){
+        
+    }
     public void setDenda(int x){
         Denda=x;
-        TotalGaji();
+    }
+    public void setjmlDenda(int n){
+        jmlDenda=n*Denda;
+    }
+    public int getjmlDenda(){
+        return jmlDenda;
+    }
+    public void setjmlBonus(double n){
+        jmlBonus=n*Bonus;
+    }
+    public double getjmlBonus(){
+        return jmlBonus;
     }
     public int getDenda(){
         return Denda;
     }
-    public int TotalGaji(){
-        TotalGaji=(Gaji+Tunjangan+Bonus)-Denda;
+    public double TotalGaji(){
+        TotalGaji=(Gaji+Tunjangan+jmlBonus)-jmlDenda;
         return TotalGaji;
     }
-    public void setTelat(int n){
-        
-    }
     public void DisplayMessage(){
-        
-        System.out.println(Nik+"\t"+Nama+"\t"+Gaji+"\t"+Tunjangan+"\t"+Bonus+"\t"+Denda+"\t"+TotalGaji);
+        System.out.printf("%s %7s %10d %10d %10d %10d ",Nik,Nama,Gaji,Tunjangan,Bonus,Denda);
+        System.out.println("\t"+(int)TotalGaji);
     }
 }

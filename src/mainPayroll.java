@@ -16,7 +16,7 @@ public class mainPayroll {
             {"103","2016-01-15","08:00","17:00"}
         };
         payroll Krywn = new payroll();
-        System.out.println("Nik \t Nama \t Gaji \t tunjangan \t bonus \t denda \t total gaji");
+        System.out.printf("%s %7s %10s %13s %8s %10s %14s\n","Nik","Nama","Gaji","tunjangan","bonus","denda","total gaji");
         for (int i=0;i<3;i++){
             Krywn.setNik(karyawan[i][0]);
             Krywn.setNama(karyawan[i][1]);
@@ -24,10 +24,20 @@ public class mainPayroll {
             Krywn.setTunjangan(parseInt(karyawan[i][3]));
             Krywn.setBonus(parseInt(karyawan[i][4]));
             Krywn.setDenda(parseInt(karyawan[i][5]));
+            if(i==1){
+                Krywn.setjmlDenda(2);
+            }else{
+                Krywn.setjmlDenda(0);
+            }
+            if(i==0){
+                Krywn.setjmlBonus(10);
+            }else{
+                Krywn.setjmlBonus(0);
+            }
             Krywn.TotalGaji();
             Krywn.DisplayMessage();
             System.out.println();
-            
+
         }     
         
         
