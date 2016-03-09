@@ -7,6 +7,7 @@ package Github;
 
 import java.time.LocalTime;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -46,9 +47,24 @@ public class HitungGaji {
         }
         return denda;
     }
-    
-    public double hitungBonus(){
+
+    public double hitungBonus(String lembur, String weekday, int ap) {
+
+        double bonus = 0;
+        Date weekend = new Date(116, 0, 15);
+        SimpleDateFormat weekend2 = new SimpleDateFormat("EEEE");
         
-        return 0;
+        JadwalKaryawan k1 = new JadwalKaryawan();
+        
+        String pulang = "17:00";
+        LocalTime pulang1 = LocalTime.parse(pulang);
+        LocalTime pulang2= LocalTime.parse(lembur);
+        
+        Boolean cek = pulang2.isAfter(pulang1);
+Boolean cek2 = 
+        if (cek=true) {
+            
+        }
+        return bonus;
     }
 }
