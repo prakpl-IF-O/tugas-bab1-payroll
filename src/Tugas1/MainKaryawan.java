@@ -24,13 +24,13 @@ public class MainKaryawan {
         K1.jumDenda2(K1.getDenda());
         K1.jumlahdenda();
         K1.tanggal[0]= "2016-01-15";
-        K1.masukjam[0]= 8;
-        K1.keluarjam[0]= 17;
+        K1.masukjamkerja[0]= 8;
+        K1.keluarjamkerja[0]= 17;
         K1.tanggal[1]= "2016-01-16";
-        K1.masukjam[1]= 8;
-        K1.keluarjam[1]= 18.5;
-        K1.ketentuanJammasuk1(K1.masukjam[0],K1.keluarjam[0],K1.bonus);
-        K1.ketentuanJammasuk2(K1.masukjam[1],K1.keluarjam[1],K1.bonus);
+        K1.masukjamkerja[1]= 8;
+        K1.keluarjamkerja[1]= 18.5;
+        K1.ketentuanJammasuk1(K1.masukjamkerja[0],K1.keluarjamkerja[0],K1.bonus);
+        K1.ketentuanJammasuk2(K1.masukjamkerja[1],K1.keluarjamkerja[1],K1.bonus);
         K1.jumlah();
         K1.TampilkanData();
                 
@@ -42,13 +42,10 @@ public class MainKaryawan {
         K2.setBonus(100);
         K2.setDenda(100);
         K2.tanggal[0]= "2016-01-15";
-        K2.masukjam[0]= 8;
-        K2.keluarjam[0]= 15;
+        K2.masukjamkerja[0]= 8;
+        K2.keluarjamkerja[0]= 15;
         K2.tanggal[1]= null;
-        K2.masukjam[1]= 8;
-        K2.keluarjam[1]= 17;
-        K2.ketentuanJammasuk1(K2.masukjam[0],K2.keluarjam[0],K2.bonus);
-        K2.ketentuanJammasuk2(K2.masukjam[1],K2.keluarjam[1],K2.bonus);
+        K2.ketentuanJammasuk1(K2.masukjamkerja[0],K2.keluarjamkerja[0],K2.bonus);
         K2.jumDenda1(K2.getDenda());
         K2.jumDenda2(K2.getDenda());
         K2.jumlahdenda();
@@ -64,21 +61,14 @@ public class MainKaryawan {
         K3.setBonus(200);
         K3.setDenda(125);
         K3.tanggal[0]= "2016-01-15";
-        K3.masukjam[0]= 8;
-        K3.keluarjam[0]=17;
+        K3.masukjamkerja[0]= 8;
+        K3.keluarjamkerja[0]=17;
         K3.tanggal[1]= null;
-        K3.masukjam[1]= 8;
-        K3.keluarjam[1]= 17;
-        K3.ketentuanJammasuk1(K3.masukjam[0],K3.keluarjam[0],K3.bonus);
-        K3.ketentuanJammasuk2(K3.masukjam[1],K3.keluarjam[1],K3.bonus);
+        K3.ketentuanJammasuk1(K3.masukjamkerja[0],K3.keluarjamkerja[0],K3.bonus);
         K3.jumDenda1(K3.getDenda());
         K3.jumDenda2(K3.getDenda());
         K3.jumlahdenda();
         K3.jumlah();
-        K3.TampilkanData();
-    
-       
+        K3.TampilkanData();      
     }
 }
-   
-
