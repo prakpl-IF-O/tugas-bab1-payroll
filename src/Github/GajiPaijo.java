@@ -30,6 +30,29 @@ public class GajiPaijo {
 
     }
 
+    public double bonusPaijo() throws ParseException{
+        HitungGaji m2 = new HitungGaji();
+
+        double bonus = m2.hitungDenda("2016-01-15", "08:00", "17:00", 150);
+        return bonus;
+    }
+    
+    public double dendaPaijo2() throws ParseException {
+        HitungGaji m2 = new HitungGaji();
+
+        double denda = m2.hitungDenda("2016-01-16", "08:00", "18:30", 75);
+        return denda;
+
+    }
+
+    public double bonusPaijo2() throws ParseException{
+        HitungGaji m2 = new HitungGaji();
+
+        double bonus = m2.hitungDenda("2016-01-15", "08:00", "18:30", 150);
+        return bonus;
+    }
+    
+    
     public static void main(String[] args) throws ParseException {
         HitungGaji m2 = new HitungGaji();
         double denda = m2.hitungDenda("2016-01-15", "08:00", "17:00", 75);
