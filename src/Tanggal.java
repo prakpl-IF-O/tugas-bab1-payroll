@@ -12,6 +12,10 @@ public class Tanggal {
         tanggal = a;
         bulan = b;
         tahun = c;
+        
+    //untuk cara implementasi javatextsdf, calendar, dll saya liat milik rickyirfandi untuk penentuan hari berdasarkan tanggal.
+        
+        
         if (bulan==1){
             Date date1 = (new GregorianCalendar(tahun, Calendar.JANUARY, tanggal)).getTime();
             hari = new SimpleDateFormat("EEEE").format(date1);
