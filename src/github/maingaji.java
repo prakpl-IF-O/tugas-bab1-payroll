@@ -25,11 +25,19 @@ public class maingaji {
      upah z1=new upah();
    z1.Upah(q1.Hari("2016-01-15"), 900, 200, 150, 75, 08.00, 17.00);
      upah z2=new upah();
-   z2.Upah(q2.Hari("2016-01-16"), 900, 200, 150, 75, 08.00, 17.00);
+   z2.Upah(q2.Hari("2016-01-16"), 900, 200, 150, 75, 08.00, 18.30);
      upah z3=new upah(); 
    z3.Upah(q3.Hari("2016-01-15"), 875, 200, 100, 100, 08.00, 15.00);
      upah z4=new upah(); 
    z4.Upah(q4.Hari("2016-01-15"), 1000, 350, 200, 125, 08.00, 17.00);
+   x1.display();
+        System.out.println(z2.getZ()+z1.getZ());
+        x2.display();
+        System.out.println(z3.getZ());
+        x3.display();
+        System.out.println(z4.getZ());
+    
     }
+   
     
 }

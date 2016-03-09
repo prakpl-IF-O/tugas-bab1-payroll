@@ -39,5 +39,12 @@ public class karyawan {
     public int getDenda() {
         return denda;
     }
-    
+    public void display(){
+        System.out.print(nama+"  ");
+        System.out.print(nik+"  ");
+        System.out.print(gaji+"  ");
+        System.out.print(tunjangan+"  ");
+        System.out.print(bonus+"  ");
+        System.out.print(denda+"  ");
+    }
 }
