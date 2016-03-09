@@ -15,8 +15,21 @@ public class maingaji {
   y3.absensi("102", "2016-01-15", 08.00, 15.00);
     absensi y4=new absensi();  
   y4.absensi("103", "2016-01-15", 08.00, 17.00);
+  
   hari a=new hari ();
-        System.out.println(a.Hari("2016-03-10"));
+     hari q1=new hari();
+     hari q2=new hari();
+     hari q3=new hari();
+     hari q4=new hari();
+    
+     upah z1=new upah();
+   z1.Upah(q1.Hari("2016-01-15"), 900, 200, 150, 75, 08.00, 17.00);
+     upah z2=new upah();
+   z2.Upah(q2.Hari("2016-01-16"), 900, 200, 150, 75, 08.00, 17.00);
+     upah z3=new upah(); 
+   z3.Upah(q3.Hari("2016-01-15"), 875, 200, 100, 100, 08.00, 15.00);
+     upah z4=new upah(); 
+   z4.Upah(q4.Hari("2016-01-15"), 1000, 350, 200, 125, 08.00, 17.00);
     }
     
 }
