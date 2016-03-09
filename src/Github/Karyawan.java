@@ -10,9 +10,7 @@ package Github;
  * @author dwiyan
  */
 public class Karyawan {
-
     public int data[][] = new int[3][4];
-
     public void dataKaryawan() {
         data[0][0] = 900;
         data[0][1] = 200;
@@ -26,9 +24,7 @@ public class Karyawan {
         data[2][1] = 300;
         data[2][2] = 200;
         data[2][3] = 125;
-        
     }
-
     public void dataDisplay1() {
         dataKaryawan();
         System.out.println("nik,nama,gaji,tunjangan,bonus,denda");

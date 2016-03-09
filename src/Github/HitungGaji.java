@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Github;
-
 import java.time.LocalTime;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,54 +15,37 @@ import java.text.ParseException;
  * @author dwiyan
  */
 public class HitungGaji {
-
     JadwalKaryawan m2 = new JadwalKaryawan();
-
     public double hitungDenda(String hari, String awal, String akhir, int ap) throws ParseException {
         double denda = 0;
         JadwalKaryawan k1 = new JadwalKaryawan();
         Date waktu = new Date(116, 0, 16);
         Date waktul = new Date(116, 0, 17);
         SimpleDateFormat paijo1 = new SimpleDateFormat("EEEE");
-
         String tgl = hari;
         DateFormat df = new SimpleDateFormat("yyyy-mm-dd");
         Date tgl1 = df.parse(tgl);
         DateFormat df2 = new SimpleDateFormat("EEEE");
         String tgl2 = df2.format(tgl1);
-        //  System.out.println(tgl2);
         String hari1 = paijo1.format(waktu);
         String hari2 = paijo1.format(waktul);
-        // String hari3 = paijo1.format(tgl2);
-        // System.out.println(hari1 + " " + hari2);
         Boolean cek = hari1.equals(tgl2);
-        // System.out.println(cek);
         Boolean cek2 = hari2.equals(tgl2);
-        // System.out.println(cek2);
         if (cek2 == false || cek == false) {
-
             String a = "08:00";
             String b = "17:00";
             LocalTime a2 = LocalTime.parse(awal);
             LocalTime b2 = LocalTime.parse(akhir);
-            // System.out.println("a2=" + a2+" b2 = "+b2);
             LocalTime a1 = LocalTime.parse(a);
             LocalTime b1 = LocalTime.parse(b);
-            // System.out.println("a1="+a1+" b1="+b1);
             Boolean c = a2.isAfter(a1);
-            //System.out.println(c);
             Boolean d = b2.isBefore(b1);
-            //System.out.println(c);
             if (c == true || d == true) {
-
                 int waktu1 = a2.getHour() - a1.getHour();
                 int waktu2 = b1.getHour() - b2.getHour();
-
                 denda = (waktu1 + waktu2) * ap;
                 return denda;
-
             }
-
         } else {
             return 0;
         }

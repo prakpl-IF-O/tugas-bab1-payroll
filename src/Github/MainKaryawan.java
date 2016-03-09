@@ -12,7 +12,6 @@ import java.text.ParseException;
  * @author dwiyan
  */
 public class MainKaryawan {
-
     public static void main(String[] args) throws ParseException {
         GajiKaryawan tampil3 = new GajiKaryawan();
         Karyawan tampil = new Karyawan();

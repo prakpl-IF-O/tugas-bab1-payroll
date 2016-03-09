@@ -4,15 +4,12 @@
  * and open the template in the editor.
  */
 package Github;
-
 import java.text.ParseException;
-
 /**
  *
  * @author dwiyan
  */
 public class GajiKaryawan {
-
     public void tampilGaji() throws ParseException {
         GajiPaijo o1 = new GajiPaijo();
         GajiLulu o2 = new GajiLulu();
@@ -23,7 +20,6 @@ public class GajiKaryawan {
         int d = (int) c;
         int e = (int) b;
         int f = (int) a;
-
         Karyawan o4 = new Karyawan();
         System.out.println("nik,nama,gaji,tunjangan,bonus,denda,total_gaji");
         String yarra[] = {"101,paijo,900,200,150,75,"};
