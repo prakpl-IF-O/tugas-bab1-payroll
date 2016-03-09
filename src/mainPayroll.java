@@ -8,7 +8,12 @@ public class mainPayroll {
         Payroll karyawan0 = new Payroll();
         Payroll karyawan1 = new Payroll();
         Payroll karyawan2 = new Payroll();
-
+        
+        System.out.println("~~~Payroll Karyawan~~~");
+        System.out.println("*Info*");
+        System.out.println("-Bonus : 50000/jam (Hari Kerja), 100000/jam (Hari Libur)");
+        System.out.println("-Denda : 50000/jam");
+        
         //Data karyawan
         nama = "Akik";
         karyawan0.setNama(nama);
