@@ -63,6 +63,20 @@ public class MainKaryawan {
         K3.setTunjangan(350);
         K3.setBonus(200);
         K3.setDenda(125);
+        K3.tanggal[0]= "2016-01-15";
+        K3.masukjam[0]= 8;
+        K3.keluarjam[0]=17;
+        K3.tanggal[1]= null;
+        K3.masukjam[1]= 8;
+        K3.keluarjam[1]= 17;
+        K3.ketentuanJammasuk1(K3.masukjam[0],K3.keluarjam[0],K3.bonus);
+        K3.ketentuanJammasuk2(K3.masukjam[1],K3.keluarjam[1],K3.bonus);
+        K3.jumDenda1(K3.getDenda());
+        K3.jumDenda2(K3.getDenda());
+        K3.jumlahdenda();
+        K3.jumlah();
+        K3.TampilkanData();
+    
        
     }
 }
