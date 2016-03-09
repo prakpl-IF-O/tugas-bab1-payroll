@@ -8,6 +8,8 @@ package Github;
 import java.time.LocalTime;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
 
 /**
  *
@@ -15,20 +17,22 @@ import java.util.Date;
  */
 public class HitungGaji {
 
-    public static void main(String[] args) {
-        double denda;
+    JadwalKaryawan m2 = new JadwalKaryawan();
 
-    }
-
-    public void hitung() {
-
-    }
-
-    public double hitungDenda(String awal, String akhir, int ap) {
+    public double hitungDenda(String hari, String awal, String akhir, int ap) throws ParseException {
         double denda = 0;
         JadwalKaryawan k1 = new JadwalKaryawan();
-
+        Date waktu = new Date(116, 0, 16);
+        Date waktul = new Date(116, 0, 17);
+        SimpleDateFormat paijo1 = new SimpleDateFormat("EEEE");
         k1.setJadwal();
+        String tgl = hari;
+        DateFormat df = new SimpleDateFormat("MM-dd-yyyy");
+        Date startDate1 = df.parse(tgl);
+        System.out.println(startDate1);
+        DateFormat df2 = new SimpleDateFormat("yyyy/MM/dd");
+        String startDateString2 = df2.format(startDate1);
+        System.out.println(startDateString2);
         String a = "08:00";
         String b = "17:00";
         LocalTime a2 = LocalTime.parse(awal);
@@ -48,23 +52,25 @@ public class HitungGaji {
         return denda;
     }
 
-    public double hitungBonus(String lembur, String weekday, int ap) {
+    public double hitungTambahan(String hari, String awal, String akhir, int bonus, int denda) {
 
-        double bonus = 0;
-        Date weekend = new Date(116, 0, 15);
-        SimpleDateFormat weekend2 = new SimpleDateFormat("EEEE");
-        
-        JadwalKaryawan k1 = new JadwalKaryawan();
-        
+        double bns = 0;
+
         String pulang = "17:00";
         LocalTime pulang1 = LocalTime.parse(pulang);
-        LocalTime pulang2= LocalTime.parse(lembur);
-        
+        LocalTime pulang2 = LocalTime.parse(akhir);
+
         Boolean cek = pulang2.isAfter(pulang1);
-Boolean cek2 = 
-        if (cek=true) {
-            
+
+        if (cek = true) {
+            int waktu = pulang2.getHour() - pulang1.getHour();
+            bns = waktu * bonus;
         }
         return bonus;
+    }
+
+    public double bonusWeekend(String a) {
+
+        return 0;
     }
 }
