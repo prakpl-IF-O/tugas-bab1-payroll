@@ -74,7 +74,7 @@ public class Payroll {
             denda = (jamMasuk - 8) * 50;
             if (jamPulang >= 17) {
                 bonus = (jamPulang - 17) * 50;
-                totalbonus += bonus;
+                totalbonus += bonus - denda;
             } else {
                 denda += 50;
                 totalbonus -= denda;
@@ -112,17 +112,19 @@ public class Payroll {
     }
 
     public void displayData() {
+        System.out.println("");
         System.out.println("~~~Data Karyawan~~~");
         System.out.println("Nama\t\t: " + nama);
         System.out.println("NIK\t\t: " + nik);
-        System.out.println("Gaji\t\t: " + gaji);
-        System.out.println("Tunjangan\t: " + tunjangan);
+        System.out.println("Gaji\t\t: " + gaji + "000");
+        System.out.println("Tunjangan\t: " + tunjangan + "000");
     }
 
     public void displayGaji() {
         System.out.printf("Hari\t\t: %s ,%d-%d-%d\n", hariString(), tanggal, bulan, tahun);
         System.out.printf("Jam\t\t: %02d:%02d s/d %02d:%02d\n", jamMasuk, menitMasuk, jamPulang, menitPulang);
-        System.out.println("Bonus\t\t: " + bonus);
-        System.out.println("Denda\t\t: " + denda);
+        System.out.println("Bonus\t\t: " + bonus + "000");
+        System.out.println("Denda\t\t: " + denda + "000");
+        System.out.println("----------------------------------");
     }
 }
