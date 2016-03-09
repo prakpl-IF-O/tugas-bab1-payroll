@@ -8,9 +8,7 @@
  *
  * @author user
  */
-import java.util.Scanner;
 public class Kerja {
-    Scanner in = new Scanner ( System.in);
     private String Nama;
     private String nik;
     private double gaji;
@@ -20,40 +18,40 @@ public class Kerja {
     private double denda1;
     private double denda2;
     private double denda3;
-    private String tanggal;
+    private double tanggal;
+    private double bulan;
+    private double tahun;
     private double jammsk;
     private double jamplg;
     private double total;
     
-    public void setKaryawan (){
-        Scanner in = new Scanner (System.in);
-        System.out.print("Masukan Nama    :");
-        Nama = in.nextLine();
-        System.out.print("Masukan NIK     :");
-        nik=in.nextLine();
-        System.out.print("Gaji            :");
-        gaji=in.nextDouble();
-        System.out.print("Tunjangan       :");
-        tunjangan=in.nextDouble();
+    public void setKaryawan (String n,String a, double y, double o){
+        Nama = n;
+        nik=a;
+        gaji=o;
+        tunjangan=o;
     }
-    public void setAbsensi(){
-        Scanner in= new Scanner (System.in);
-        System.out.print("Masukan Tanggal :");
-        tanggal=in.nextLine();
-        System.out.print("Jam Masuk       :");
-        jammsk=in.nextDouble();
-        System.out.print("Jam Pulang      :");
-        jamplg=in.nextDouble();
+    public void setAbsensi(double t,double b, double x, double j, double i){
+        tanggal=t;
+        bulan=b;
+        tahun=x;
+        jammsk=j;
+        jamplg=i;
         
-    } 
+    }
     public void getBonus(){
+        if ( tanggal==15){
         if ( jamplg > 17){
         bonus=(jamplg-17) * 50;   
     } else {
             bonus=0;
         }
-    }
+    }  else if ( tanggal==16||tanggal==17){
+            bonus=(jamplg-jammsk)*50;
+        } 
+        }
     public void getDenda (){
+        if ( tanggal==15){
         denda1= jammsk-8;
         denda2= 17 - jamplg;
         if (jamplg < 17 && jammsk > 8){
@@ -73,7 +71,10 @@ public class Kerja {
         } else {
             denda=0;
         }
-    }
+    } else {
+            denda=0;
+        }
+        }
     public void getTotal(){
         total=( gaji+tunjangan+bonus)-denda;
         
