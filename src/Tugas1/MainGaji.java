@@ -19,8 +19,8 @@ public class MainGaji {
          
          ArrayList<DataKerja> DK=new ArrayList();
          DataKerja aa= new DataKerja(101,"2016-01-15",08.00,17.00);
-         DataKerja bb= new DataKerja(101,"2016-01-15",08.00,17.00);
-         DataKerja cc= new DataKerja(101,"2016-01-15",08.00,17.00);
+         DataKerja bb= new DataKerja(101,"2016-01-16",08.00,18.30);
+         DataKerja cc= new DataKerja(101,"2016-01-15",08.00,15.00);
          DataKerja dd= new DataKerja(101,"2016-01-15",08.00,17.00);
          
          cekHari a=new cekHari();
@@ -28,6 +28,15 @@ public class MainGaji {
          cekHari c=new cekHari();
          cekHari d=new cekHari();
          
+        HitungGaji a1=new HitungGaji();
+        HitungGaji a2=new HitungGaji();
+        HitungGaji a3=new HitungGaji();
+        HitungGaji a4=new HitungGaji();
+        
+        a1.hirungGaji(a.CekHari("2016-01-15"), aa.getJamker(), aa.getJampul(),kar1.getBonus() , kar1.getDenda(), kar1.getGaji(), kar1.getTunjangan());
+        a2.hirungGaji(a.CekHari("2016-01-16"), bb.getJamker(), bb.getJampul(),kar1.getBonus() , kar1.getDenda(), kar1.getGaji(), kar1.getTunjangan());
+        a3.hirungGaji(a.CekHari("2016-01-15"), cc.getJamker(), cc.getJampul(),kar2.getBonus() , kar2.getDenda(), kar2.getGaji(), kar2.getTunjangan());
+        a4.hirungGaji(a.CekHari("2016-01-15"), dd.getJamker(), dd.getJampul(),kar3.getBonus() , kar3.getDenda(), kar3.getGaji(), kar3.getTunjangan());
         
     }
 }
