@@ -10,5 +10,10 @@ package Github;
  * @author dwiyan
  */
 public class GajiKaryawan {
-    
+    public void tampilGaji(){
+        
+        
+        
+        
+    }
 }
