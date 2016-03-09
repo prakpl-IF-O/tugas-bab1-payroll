@@ -28,26 +28,35 @@ public class HitungGaji {
         k1.setJadwal();
         String tgl = hari;
         DateFormat df = new SimpleDateFormat("MM-dd-yyyy");
-        Date startDate1 = df.parse(tgl);
-        System.out.println(startDate1);
-        DateFormat df2 = new SimpleDateFormat("yyyy/MM/dd");
-        String startDateString2 = df2.format(startDate1);
-        System.out.println(startDateString2);
-        String a = "08:00";
-        String b = "17:00";
-        LocalTime a2 = LocalTime.parse(awal);
-        LocalTime b2 = LocalTime.parse(akhir);
-        LocalTime a1 = LocalTime.parse(a);
-        LocalTime b1 = LocalTime.parse(b);
+        Date tgl1 = df.parse(tgl);
+        DateFormat df2 = new SimpleDateFormat("yyyy-MM-dd");
+        String tgl2 = df2.format(tgl1);
 
-        Boolean c = a1.isAfter(a2);
-        Boolean d = b1.isBefore(b2);
-        if (c == true || d == true) {
+        String hari1 = paijo1.format(waktu);
+        String hari2 = paijo1.format(waktul);
+        String hari3 = paijo1.format(tgl2);
 
-            int waktu1 = a2.getHour() - a1.getHour();
-            int waktu2 = b1.getHour() - b2.getHour();
+        Boolean cek = waktu.equals(tgl2);
+        Boolean cek2 = waktul.equals(tgl2);
 
-            denda = (waktu1 + waktu2) * ap;
+        if (cek2 == false || cek == false) {
+
+            String a = "08:00";
+            String b = "17:00";
+            LocalTime a2 = LocalTime.parse(awal);
+            LocalTime b2 = LocalTime.parse(akhir);
+            LocalTime a1 = LocalTime.parse(a);
+            LocalTime b1 = LocalTime.parse(b);
+
+            Boolean c = a1.isAfter(a2);
+            Boolean d = b1.isBefore(b2);
+            if (c == true || d == true) {
+
+                int waktu1 = a2.getHour() - a1.getHour();
+                int waktu2 = b1.getHour() - b2.getHour();
+
+                denda = (waktu1 + waktu2) * ap;
+            }
         }
         return denda;
     }
