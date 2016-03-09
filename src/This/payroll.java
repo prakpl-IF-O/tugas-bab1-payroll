@@ -5,7 +5,6 @@ public class payroll {
     double JamBolos;
     double JamTelat;
     double JamBonus;
-    double BonusLibur;
     double JumlahGaji;
     double GajiKeseluruhan;
     double BonusPegawai[] = new double[2];
@@ -117,16 +116,7 @@ System.out.println("========================SISTEM PAYROLL======================
         }
         BonusPegawai[0] = JamBonus * n;
     }
-    public void BonusLiburan(double m, int n){
-    //bingung?
-    //if (m==0){
-    //BonusLibur=17-m;
-    //}else
-    //{JamBonus = 0;
-    //}
     
-    
-    }
     
     public void TotalGaji() {
         if (TanggalPegawai[1] == null) {
