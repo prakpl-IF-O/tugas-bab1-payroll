@@ -17,7 +17,7 @@ public class Payroll {
  }
  public void display(){
      for(int i=0;i<3;i++){
-     System.out.println("Nama : "+nama[i]+" "+"nik : " +nik[i]);   
+     System.out.println("Nama : "+nama[i]+" "+"nik : " +nik[i] );   
      }
  }
  public void display2(){

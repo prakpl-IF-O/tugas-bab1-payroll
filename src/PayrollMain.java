@@ -2,10 +2,9 @@
 public class PayrollMain {
     
     public static void main(String[] args) {
-        // tanggal 15=jumat ,16=sabtu
         //masuk kerja jam 08:00 ,selesai jam 17:00
         Payroll pr=new Payroll();
-        double jamKerjaP=(19.5),jamKerjaLu=7;
+        double jamKerjaP=(19),jamKerjaLu=7;
         double jamKerjaLa=9,gajiTotP,gajiTotLu,gajiTotla;
         int []gaji={900,875,1000};
         int []tun={200,200,350};
