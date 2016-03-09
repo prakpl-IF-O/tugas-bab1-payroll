@@ -30,11 +30,8 @@ public class JadwalKaryawan {
         SimpleDateFormat lulu1 = new SimpleDateFormat("EEEE");
         SimpleDateFormat lala1 = new SimpleDateFormat("EEEE");
         SimpleDateFormat hari = new SimpleDateFormat("yyyy-MM-dd");
-        LocalTime paijoMasuk = LocalTime.of(8, 0);
         SimpleDateFormat a = new SimpleDateFormat("HH-mm");
-        LocalTime paijo1Masuk = LocalTime.of(8, 0);
-        LocalTime luluMasuk = LocalTime.of(8, 0);
-        LocalTime lalaMasuk = LocalTime.of(8, 0);
+
 
         data[0][0] = "101";
         data[0][1] = hari.format(paijo);
@@ -53,10 +50,15 @@ public class JadwalKaryawan {
         data[3][1] = hari.format(lala);
         data[3][2] = "08:00";
         data[3][3] = "17:00";
+//return data[3][4];
+    }
 
+    public String getJadwal() {
+        return data[4][4];
     }
 
     public void display() {
+        //  String data[][] = new String[4][4];
         setJadwal();
         System.out.println("nik,tanggal,jam_masuk,jam_pulang");
         for (int x = 0; x < data.length; x++) {
