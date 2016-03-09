@@ -41,6 +41,19 @@ public class MainKaryawan {
         K2.setTunjangan(200);
         K2.setBonus(100);
         K2.setDenda(100);
+        K2.tanggal[0]= "2016-01-15";
+        K2.masukjam[0]= 8;
+        K2.keluarjam[0]= 15;
+        K2.tanggal[1]= null;
+        K2.masukjam[1]= 8;
+        K2.keluarjam[1]= 17;
+        K2.ketentuanJammasuk1(K2.masukjam[0],K2.keluarjam[0],K2.bonus);
+        K2.ketentuanJammasuk2(K2.masukjam[1],K2.keluarjam[1],K2.bonus);
+        K2.jumDenda1(K2.getDenda());
+        K2.jumDenda2(K2.getDenda());
+        K2.jumlahdenda();
+        K2.jumlah();
+        K2.TampilkanData();
        
         
         DataPegawai K3 = new DataPegawai();
