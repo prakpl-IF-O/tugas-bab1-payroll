@@ -15,6 +15,8 @@ public class maingaji {
   y3.absensi("102", "2016-01-15", 08.00, 15.00);
     absensi y4=new absensi();  
   y4.absensi("103", "2016-01-15", 08.00, 17.00);
+  hari a=new hari ();
+        System.out.println(a.Hari("2016-03-10"));
     }
     
 }
