@@ -23,6 +23,8 @@ public class Karyawan {
     int jk;
     int mk;
 
+    int t;
+
     public void setTanggalK(int t, int b, int h, int jm1, int mm1, int jk1, int mk1) {
         Tanggal.set(t, b, h, jm1, mm1);
         Tanggal1.set(t, b, h, jk1, mk1);
@@ -30,6 +32,7 @@ public class Karyawan {
         this.mm1 = mm1;
         this.jk1 = jk1;
         this.mk1 = mk1;
+        this.t = t;
     }
 
     public void setTanggal(int t, int b, int h, int jm, int mm, int jk, int mk) {
@@ -39,6 +42,7 @@ public class Karyawan {
         this.mm = mm;
         this.jk = jk;
         this.mk = mk;
+
     }
 
     public void setNama(String n) {
@@ -59,12 +63,24 @@ public class Karyawan {
 
     public void setBonus(int b) {
         Bonus = b;
+        boolean coba = false;
 
+        if (t == 5 || t == 6) {
+            coba = true;
+
+        } else if ((t - 5) % 7 == 0 || (t - 6) % 7 == 0) {
+            coba = true;
+           
+        }
+        if (coba == true){ 
+            Bonus = Bonus * (jk1 - jm1);
+            
+        }
         if (jk1 > jk) {
             Bonus = Bonus * (jk1 - jk);
             if (mk1 > mk) {
-                Bonus = Bonus * (mk1 - mk);
-            }
+                Bonus = Bonus + (Bonus/2);
+            } 
         }
 
     }
@@ -73,11 +89,11 @@ public class Karyawan {
         Denda = d;
 
         if (jm1 > jm) {
-            System.out.println(Denda);
+
             Denda = Denda * (jm1 - jm);
 
             if (mm1 > mm) {
-                Denda = Denda * (mm1 - mm);
+                Denda = Denda + (Denda/2);
             }
         }
     }
@@ -87,12 +103,9 @@ public class Karyawan {
     }
 
     public void displayMessage() {
-        System.out.println("Nik,Nama,Gaji,Tunjangan,Bonus,Denda,Total Gaji");
+        
         System.out.println(Nik + "," + Nama + "," + Gaji + "," + Tunjangan + "," + Bonus + "," + Denda + "," + Total_Gaji);
-        System.out.println("Tanggal, Jam Masuk");
-        System.out.println(Tanggal.getTime());
-        System.out.println("Tanggal, Jam Keluar");
-        System.out.println(Tanggal1.getTime());
+        
     }
 
     public void Waktu() {
