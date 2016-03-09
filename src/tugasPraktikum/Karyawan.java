@@ -1,46 +1,46 @@
 package tugasPraktikum;
 public class Karyawan {
     private String nama;
-    private short nik;
-    private short gaji;
-    private short denda;
-    private short tunjangan;
-    private short bonus;
+    private int nik;
+    private int gaji;
+    private int denda;
+    private int tunjangan;
+    private int bonus;
     
     public void setNama(String a){
         nama=a;
     }
-    public void setNik(short a){
+    public void setNik(int a){
         nik=a;
     }
-    public void setGaji(short a){
+    public void setGaji(int a){
         gaji=a;
     }
-    public void setDenda(short a){
+    public void setDenda(int a){
         denda=a;
     }
-    public void setTunjangan(short a){
+    public void setTunjangan(int a){
         tunjangan=a;
     }
-    public void setBonus(short a){
+    public void setBonus(int a){
         bonus=a;
     }
     public String getNama(){
         return nama;
     }
-    public short getNik(){
+    public int getNik(){
         return nik;
     }
-    public short getGaji(){
+    public int getGaji(){
         return gaji;
     }
-    public short getDenda(){
+    public int getDenda(){
         return gaji;
     }
-    public short getTunjangan(){
+    public int getTunjangan(){
         return tunjangan;
     }
-    public short getBonus(){
+    public int getBonus(){
         return bonus;
     }
     public int totalGaji(){
