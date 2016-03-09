@@ -104,7 +104,7 @@ public class HitungGaji {
 
             int e = c.getHour() - f.getHour();
             if (e <= 0) {
-                return 0;
+             return 0;
             }
             return e * ap;
         }

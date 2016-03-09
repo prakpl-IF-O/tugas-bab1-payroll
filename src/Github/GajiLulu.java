@@ -24,7 +24,7 @@ public class GajiLulu {
     public double bonusLulu() throws ParseException {
         HitungGaji m2 = new HitungGaji();
 
-        double bonus = m2.hitungDenda("2016-01-15", "08:00", "15:00", 100);
+        double bonus = m2.hitungBonus("2016-01-15", "08:00", "15:00", 100);
         return bonus;
     }
 
@@ -35,18 +35,5 @@ public class GajiLulu {
         double totalGaji = 875 + 200 + a - b;
 
         return totalGaji;
-    }
-
-    public static void main(String[] args) throws ParseException {
-
-        HitungGaji m2 = new HitungGaji();
-        double denda = m2.hitungDenda("2016-01-15", "08:00", "15:00", 100);
-        System.out.println(denda);
-
-        double bonus = m2.hitungBonus("2016-01-15", "08:00", "15:00", 100);
-        System.out.println(bonus);
-
-        double gajiLulu = 875 + 200 + bonus - denda;
-        System.out.println(gajiLulu);
     }
 }
