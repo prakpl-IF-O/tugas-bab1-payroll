@@ -66,7 +66,19 @@ public class Tugas1 {
         Kc.setTunjangan(350);
         Kc.setBonus(200);
         Kc.setDenda(125);
-        
+        Kc.tanggal[0]= "2016-01-15";
+        Kc.masukjam[0]= 8;
+        Kc.keluarjam[0]=17;
+        Kc.ketentuanJam1(Kc.masukjam[0],Kc.keluarjam[0],Kc.bonus);
+        Kc.tanggal[1]= null;
+        Kc.masukjam[1]= 8;
+        Kc.keluarjam[1]= 17;
+        Kc.ketentuanJam2(Kc.masukjam[1],Kc.keluarjam[1],Kc.bonus);
+        Kc.jumDenda1(Kc.getDenda());
+        Kc.jumDenda2(Kc.getDenda());
+        Kc.jumlahdenda();
+        Kc.jumlah();
+        Kc.InformasiKaryawan();
     
     }
     public void setNik (int s){
