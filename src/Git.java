@@ -1,46 +1,39 @@
 public class Git {
-private String NIKKaryawan;
+private int NIKKaryawan;
 public static String NamaKaryawan;
-private int  Gaji, Tunjangan, Bonus, Denda;
+private int  Gaji, Tunjangan, Bonus, Denda,Total_gaji, JamMasuk, JamKeluar;
 
-    public void setNIKKaryawan(String a) {
-        this.NIKKaryawan = a;
+    public void setTotal_gaji(int o) {
+        Total_gaji = (Gaji + Tunjangan + Bonus) - Denda;   
+    }
+    public void setJamMasuk(int p) {
+        JamMasuk = p;
+    }
+    public void setJamKeluar(int k) {
+        JamKeluar = k;
+    }
+    public void setNIKKaryawan(int a) {
+        NIKKaryawan = a;
     }
     public static void setNamaKaryawan(String b) {
-        Git.NamaKaryawan = b;
+        NamaKaryawan = b;
     }
     public void setGaji(int c) {
-        this.Gaji = c;
+        Gaji = c;
     }
     public void setTunjangan(int d) {
-        this.Tunjangan = d;
+        Tunjangan = d;
     }
     public void setBonus(int e) {
-        this.Bonus = e;
+        Bonus = e;
     }
     public void setDenda(int f) {
-        this.Denda = f;
+        Denda = f;
     }
-    public String getNIKKaryawan() {
-        return NIKKaryawan;
+    public void Display(){
+        System.out.println(NIKKaryawan+"," + NamaKaryawan+","+ Gaji+"," + Tunjangan+"," + Bonus+","
+        + Denda+"," + Total_gaji );
     }
-    public static String getNamaKaryawan() {
-        return NamaKaryawan;
-    }
-    public int getGaji() {
-        return Gaji;
-    }
-    public int getTunjangan() {
-        return Tunjangan;
-    }
-    public int getBonus() {
-        return Bonus;
-    }
-    public int getDenda() {
-        return Denda;
-    }
-    
-
 
 
 }
