@@ -146,15 +146,15 @@ public class Tugas1 {
     public void InformasiKaryawan(){
         System.out.printf("%-10s : %d\n","NIK",nik);
         System.out.printf("%-10s : %s\n","Nama",nama);
-        System.out.printf("%-10s : Rp. %f\n","Gaji",gaji);
-        System.out.printf("%-10s : Rp. %s\n","Tunjangan",tunjangan);
+        System.out.printf("%-10s : Rp. %.3f\n","Gaji",gaji);
+        System.out.printf("%-10s : Rp. %.3f\n","Tunjangan",tunjangan);
         System.out.printf("%-10s : %s \n","Tanggal 1",tanggal[0]);
-        System.out.printf("%-10s : Rp. %s\n","Bonus 1",bon[0]);
-        System.out.printf("%-10s : Rp.-%s\n","Denda 1",jum[0]);
+        System.out.printf("%-10s : Rp. %.3f\n","Bonus 1",bon[0]);
+        System.out.printf("%-10s : Rp.-%.3f\n","Denda 1",jum[0]);
         System.out.printf("%-10s : %s \n","Tanggal 2",tanggal[1]);
-        System.out.printf("%-10s : Rp. %s\n","Bonus 2",bon[1]);
-        System.out.printf("%-10s : Rp.-%s\n","Denda 2",jum[1]);
+        System.out.printf("%-10s : Rp. %.3f\n","Bonus 2",bon[1]);
+        System.out.printf("%-10s : Rp.-%.3f\n","Denda 2",jum[1]);
         System.out.println("-------------------------- +");
-        System.out.printf("%-10s : Rp. %s\n\n","Jumlah gajih",jumlah);    
+        System.out.printf("%-10s : Rp. %.3f\n\n","Jumlah gajih",jumlah);    
 }
 }
