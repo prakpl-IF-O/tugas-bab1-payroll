@@ -48,8 +48,8 @@ public class Tugas1 {
         Kb.keluarjam[0]= 15;
         Kb.ketentuanJam1(Kb.masukjam[0],Kb.keluarjam[0],Kb.bonus);
         Kb.tanggal[1]= null;
-        Kb.masukjam[1]= 8;
-        Kb.keluarjam[1]= 17;
+        Kb.masukjam[1]= 0;
+        Kb.keluarjam[1]= 0;
         Kb.ketentuanJam2(Kb.masukjam[1],Kb.keluarjam[1],Kb.bonus);
         Kb.jumDenda1(Kb.getDenda());
         Kb.jumDenda2(Kb.getDenda());
@@ -69,8 +69,8 @@ public class Tugas1 {
         Kc.keluarjam[0]=17;
         Kc.ketentuanJam1(Kc.masukjam[0],Kc.keluarjam[0],Kc.bonus);
         Kc.tanggal[1]= null;
-        Kc.masukjam[1]= 8;
-        Kc.keluarjam[1]= 17;
+        Kc.masukjam[1]= 0;
+        Kc.keluarjam[1]= 0;
         Kc.ketentuanJam2(Kc.masukjam[1],Kc.keluarjam[1],Kc.bonus);
         Kc.jumDenda1(Kc.getDenda());
         Kc.jumDenda2(Kc.getDenda());
@@ -101,23 +101,30 @@ public class Tugas1 {
         return denda;
     }
     public void ketentuanJam1 (double s,double x,double z) {
-        if (s>8){
+        if (s==0){
+            telatjam[0] = 0;
+        } else if (s>8){
             telatjam[0] = (double) (s-8);
         }
-        if (x<17){
+        if (s==0){
+            bolosjam [0] = 0;
+        } else if (x<17){
             bolosjam[0] =(double) (17-x);
-      } else {
+        } else {
             bon [0]= (x-17)*z;
         }
     }
     public void ketentuanJam2 (double s,double x,double z) {
-     
-        if (s>8){
+        if(s==0){
+            telatjam[1] = 0;
+        } else if (s>8){
             telatjam[1] = (double) (s-8);
         }
-        if (x<17){
+        if(s==0){
+            bolosjam[1] = 0;
+        } else if (x<17){
             bolosjam[1] =(double) (17-x);
-      } else {
+        } else {
             bon [1] = (x-17)*z;
         }
     }
